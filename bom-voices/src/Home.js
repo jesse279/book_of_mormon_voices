@@ -8,7 +8,7 @@ const Home = () => {
         <div className="banner-image">
           <div className="row">
             <h2>You've read our words. Pondered our stories.</h2>
-            <h1>How, hear our voice</h1>
+            <h1>Now, hear our voice</h1>
             <p>
               Through careful research, advanced data analyzation, and 
               compelling stylometry, scholars have discovered a fascinating 
