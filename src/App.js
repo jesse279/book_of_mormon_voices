@@ -20,7 +20,10 @@ function App() {
 // img
 // circle img
 
-
+// function to display expanded menu on nav hover
+const handleNavHoverMenuExpansion = () => {
+  console.log('hovering on nav element!');
+}
 
   return (
     <Router>

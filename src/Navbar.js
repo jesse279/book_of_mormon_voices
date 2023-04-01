@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from './images/LogoLockup-cropped.png';
 
-
-
-
 const Navbar = () => {
   return (  
     <nav className="navbar">
@@ -14,19 +11,19 @@ const Navbar = () => {
         
       </div>
       
-      
       <div className="header-item logo-main">
         <Link to="/">
           <img src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
           
       </div>
+
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/speakers">Speakers</Link>
+        <Link to="/speakers">Speakers<span class="down-carrot"> &#9660;</span></Link>
         <Link to="/faq">FAQ</Link>
-        <Link to="/toolbox">Toolbox</Link>
+        <Link to="/toolbox">Toolbox<span class="down-carrot"> &#9660;</span></Link>
 
       </div>
     </nav>
