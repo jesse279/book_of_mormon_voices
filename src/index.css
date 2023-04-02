@@ -54,8 +54,16 @@
   color: #f1356d;
 }
 
+.navbar-expanded-menu {
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .down-carrot {
-  font-size:small;
+  font-size: small;
 }
 
 .content {
@@ -150,7 +158,3 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
-
-
-
