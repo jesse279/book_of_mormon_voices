@@ -25,8 +25,7 @@
   justify-content: center;
   max-width: auto;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  
+  border-bottom: 1px solid #f2f2f2; 
 }
 
 .navbar div {
@@ -53,10 +52,8 @@
   margin: 10px;
   margin-left: 16px;
   text-decoration: none;
-  padding: 6px;
+  padding: 1vw;
   font-size: 20px;
-  box-shadow: 1px 3px 5px rgba(0,0,0,.1);
-
 }
 
 .navbar a:hover {
