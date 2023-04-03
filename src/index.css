@@ -7,6 +7,10 @@
   color: #333;
 }
 
+.logo {
+  height: 10vh;
+}
+
 .navbar {
   padding: 20px;
   display: flex;
@@ -32,8 +36,6 @@
   margin-left: auto;
   padding: 5px;
   font: 20px;
-  
-  
 }
 
 .navbar .logo-main {

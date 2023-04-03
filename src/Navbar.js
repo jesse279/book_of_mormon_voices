@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from './images/LogoLockup-cropped.png';
+import logo from './images/logo.png';
 import { useState, useEffect, useRef } from 'react';
 import NavBarExpansion from './NavBarExpansion';
 
@@ -64,23 +64,23 @@ const Navbar = () => {
       
       <div className="header-item logo-main">
         <Link to="/">
-          <img src={logo} alt="Book of Mormon Voices Logo"/>
+          <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
           
       </div>
 
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/speakers" ref={speakersTitleRef} onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
+        <Link to="/" className='nav-header'>Home</Link>
+        <Link to="/about" className='nav-header'>About</Link>
+        <Link to="/speakers" className='nav-header' ref={speakersTitleRef} onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
           Speakers
           <span className="down-carrot"> &#9660;</span>
           <NavBarExpansion className = {isHovering[0] ? 'navbar-expanded-menu' : 'navbar-expanded-menu hidden'} expandableItems={speakersExpandableItems} style={speakersExpandableStyle}></NavBarExpansion>
         </Link>
-        <Link to="/faq">FAQ</Link>
-        <Link to="/toolbox" ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
+        <Link to="/faq" className='nav-header'>FAQ</Link>
+        <Link to="/toolbox" className='nav-header' ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
           Toolbox
-          <span className="down-carrot"> &#9660;</span>
+          <span className="down-carrot nav-header"> &#9660;</span>
           <NavBarExpansion className = {isHovering[1] ? 'navbar-expanded-menu' : 'navbar-expanded-menu hidden'} expandableItems={toolboxExpandableItems} style={toolboxExpandableStyle}></NavBarExpansion>
         </Link>
 
