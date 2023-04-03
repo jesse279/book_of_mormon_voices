@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from './images/logo.png';
+import logo from './images/SC-Book-Of-Mormon-Central-Favicon-Black-32px.png';
 import { useState, useEffect, useRef } from 'react';
 import NavBarExpansion from './NavBarExpansion';
 
@@ -55,18 +55,11 @@ const Navbar = () => {
 
   return (  
     <nav className="navbar">
-      <div className="title">
-        <Link to="/">
-          <h2>Book of Mormon Voices</h2>
-        </Link>
-        
-      </div>
-      
-      <div className="header-item logo-main">
+      <div className="header-item logo-main flex-wrap">
         <Link to="/">
           <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
-          
+        <h1>Book of Mormon Explorer</h1>
       </div>
 
       <div className="links">
