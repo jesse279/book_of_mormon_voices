@@ -54,6 +54,18 @@
   color: #f1356d;
 }
 
+.navbar-expanded-menu {
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.down-carrot {
+  font-size: small;
+}
+
 .content {
   max-width: 600px;
   margin: 40px auto;
@@ -146,7 +158,3 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
-
-
-
