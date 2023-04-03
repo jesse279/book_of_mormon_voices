@@ -6,6 +6,8 @@ import Home from './Home';
 import NotFound from './NotFound';
 import About from './About';
 import FAQ from './FAQ';
+import Speakers from './Speakers';
+import SpeakerDetails from './SpeakerDetails';
 
 
 function App() {
@@ -31,8 +33,8 @@ function App() {
             <Route path="/" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/faq" element={<FAQ/>}></Route>
-            <Route path="/speakers" element={<Home></Home>}></Route>
-            <Route path="/speakers/:name" element={<Home></Home>}></Route>
+            <Route path="/speakers" element={<Speakers/>}></Route>
+            <Route path="/speakers/:name" element={<SpeakerDetails/>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
