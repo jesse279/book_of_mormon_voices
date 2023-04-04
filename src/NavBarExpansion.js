@@ -5,7 +5,7 @@ const NavBarExpansion = ({className, expandableItems, style}) => {
         <div key={index}>{item}</div>
     ));
 
-    const additionalComponentStyles = { backgroundColor: 'white'};
+    const additionalComponentStyles = {};
     const mergedStyles = { ...style, ...additionalComponentStyles };
 
     return (

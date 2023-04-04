@@ -28,8 +28,8 @@ const Navbar = () => {
    ];
   const speakersExpandableStyle = {
     position: 'absolute',
-    top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom + 10 + 'px' : '0',
-    left: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().left : '0'
+    top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
+    left: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().left : '0',
   };
 
   const toolboxTitleRef = useRef(null);
@@ -42,7 +42,7 @@ const Navbar = () => {
    ];
   const toolboxExpandableStyle = {
     position: 'absolute',
-    top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom + 10 + 'px' : '0',
+    top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom : '0',
     left: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().left : '0'
   }
   
@@ -59,7 +59,7 @@ const Navbar = () => {
         <Link to="/">
           <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
-        <h1>Book of Mormon Explorer</h1>
+        <h2>Book of Mormon Explorer</h2>
       </div>
 
       <div className="links">
@@ -68,13 +68,17 @@ const Navbar = () => {
         <Link to="/speakers" className='nav-header' ref={speakersTitleRef} onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
           Speakers
           <span className="down-carrot"> &#9660;</span>
-          <NavBarExpansion className = {isHovering[0] ? 'navbar-expanded-menu' : 'navbar-expanded-menu hidden'} expandableItems={speakersExpandableItems} style={speakersExpandableStyle}></NavBarExpansion>
+          {isHovering[0] && (
+            <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={speakersExpandableItems} style={speakersExpandableStyle}></NavBarExpansion>
+          )}
         </Link>
         <Link to="/faq" className='nav-header'>FAQ</Link>
         <Link to="/toolbox" className='nav-header' ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
           Toolbox
           <span className="down-carrot nav-header"> &#9660;</span>
-          <NavBarExpansion className = {isHovering[1] ? 'navbar-expanded-menu' : 'navbar-expanded-menu hidden'} expandableItems={toolboxExpandableItems} style={toolboxExpandableStyle}></NavBarExpansion>
+          {isHovering[1] && (
+              <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={toolboxExpandableItems} style={toolboxExpandableStyle}></NavBarExpansion>        
+          )}
         </Link>
 
       </div>

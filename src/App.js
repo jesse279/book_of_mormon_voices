@@ -36,7 +36,6 @@ const handleNavHoverMenuExpansion = () => {
     <Router>
       <div className="App">
         <Navbar></Navbar>
-        <div className="content">
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
@@ -51,7 +50,6 @@ const handleNavHoverMenuExpansion = () => {
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
-        </div>
 
       </div>
     </Router>
