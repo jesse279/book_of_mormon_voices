@@ -3,8 +3,19 @@
 /* base styles */
 * {
   margin: 0px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'EB Garamond', serif;
   color: #333;
+}
+
+.logo {
+  height: 10vh;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .navbar {
@@ -14,8 +25,7 @@
   justify-content: center;
   max-width: auto;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  
+  border-bottom: 1px solid #f2f2f2; 
 }
 
 .navbar div {
@@ -32,8 +42,6 @@
   margin-left: auto;
   padding: 5px;
   font: 20px;
-  
-  
 }
 
 .navbar .logo-main {
@@ -44,10 +52,8 @@
   margin: 10px;
   margin-left: 16px;
   text-decoration: none;
-  padding: 6px;
+  padding: 1vw;
   font-size: 20px;
-  box-shadow: 1px 3px 5px rgba(0,0,0,.1);
-
 }
 
 .navbar a:hover {
