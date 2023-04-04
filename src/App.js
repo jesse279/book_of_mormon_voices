@@ -8,6 +8,7 @@ import About from './About';
 import FAQ from './FAQ';
 import Speakers from './Speakers';
 import SpeakerDetails from './SpeakerDetails';
+import Toolbox from './Toolbox';
 
 
 function App() {
@@ -37,8 +38,8 @@ const handleNavHoverMenuExpansion = () => {
             <Route path="/about" element={<About/>}></Route>
             <Route path="/faq" element={<FAQ/>}></Route>
             <Route path="/speakers" element={<Speakers/>}></Route>
-            <Route path="/speakers/:name" element={<SpeakerDetails/>}></Route>
-            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/speakers/:speaker_tag" element={<SpeakerDetails/>}></Route>
+            <Route path="/toolbox" element={<Toolbox/>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/" element={<Home></Home>}></Route>
