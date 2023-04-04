@@ -21,7 +21,7 @@ const SpeakerDetails = () => {
       history.push('/Home');
     }
     
-    console.log(currentSpeaker);
+    // console.log(currentSpeaker);
   }, []);
 
 
