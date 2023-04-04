@@ -7,6 +7,10 @@
   color: #333;
 }
 
+.test-mark {
+  background-color: red;
+}
+
 .logo {
   height: 10vh;
 }
@@ -58,14 +62,6 @@
 
 .navbar a:hover {
   color: #f1356d;
-}
-
-.navbar-expanded-menu {
-  position: absolute;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .down-carrot {
