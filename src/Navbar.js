@@ -59,7 +59,7 @@ const Navbar = () => {
         <Link to="/">
           <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
-        <h1>Book of Mormon Explorer</h1>
+        <h2>Book of Mormon Explorer</h2>
       </div>
 
       <div className="links">

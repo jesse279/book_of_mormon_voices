@@ -7,12 +7,20 @@
   color: #333;
 }
 
+p {
+  font-size: 22px;
+}
+
 .test-mark {
   background-color: red;
 }
 
 .logo {
   height: 10vh;
+}
+
+.home {
+  padding: 10px;
 }
 
 .flex-wrap {
@@ -39,6 +47,7 @@
 }
 
 .navbar h1 {
+  font-size: 4rem;
   color: #f1356d;
 }
 
@@ -74,12 +83,10 @@
   padding: 20px;
 }
 
-.banner-image {
-  padding-top:45%;
-  background: "/Nephi_banner.jpg";
-  background-size: contain;
-  position: relative;
-
+.banner {
+  background-image: url('./images/Nephi_banner.jpg');
+  background-size: cover;
+  height: min(45vw, 80vh);
 }
 
 /* blog previews lists */
@@ -95,9 +102,13 @@
 }
 
 .blog-preview h2 {
-  font-size: 20px;
+  font-size: 2rem;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+.main-banner-text {
+  padding-left: 1.5vw;
 }
 
 .blog-preview a {
