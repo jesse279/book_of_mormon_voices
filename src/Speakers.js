@@ -1,7 +1,7 @@
 const Speakers = () => {
   return ( 
     <div>
-      <h2>Speakers</h2>
+      <h2 style={{paddingTop: '1vw', paddingLeft: '2.8vw'}}>Speakers</h2>
       <div>
         
       </div>
