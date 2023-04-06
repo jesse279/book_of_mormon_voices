@@ -15,13 +15,14 @@ const SpeakerDetails = () => {
     });
     
     if (currentSpeaker.length > 0) {
-      setSpeaker(currentSpeaker[0])
+      setSpeaker(currentSpeaker[0]);
+
     }
     else {
       history.push('/Home');
     }
     
-    console.log(currentSpeaker);
+    // console.log(currentSpeaker);
   }, []);
 
 
@@ -30,7 +31,9 @@ const SpeakerDetails = () => {
     <div>
       <div>
         <div>
-          Add Image here
+          <img src={require("./images/Pahoran.jpg")}/>
+          
+          { speaker.img }
         </div>
         <div>
           <h3>

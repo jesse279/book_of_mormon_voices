@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import thumbnail from './images/capt_moroni.jpg';
+import data from "./speaker_data.json";
 
 const SpeakerListShort = ( ) => {
-  const speakers = [
+  const old_speakers = [
     { name: "Abinadi", link: "abinadi", id: 1, year: "200BC-148BC", word_count: 2075, description: "Abinadi knew King Noah would execute him for condemning the wickedness of the people and prophesying of their captivity (Mosiah 13:10). When the king offered Abinadi a chance to be set free if he would take back what he said, Abinadi faithfully and boldly refused. He had such great faith that he was willing to obey the Lord’s commands even if it meant he would die. At the time of his execution, it appeared that Abinadi had not made much of a difference; however, one individual, Alma, actually listened to him. Alma continued preaching Abinadi’s words to the people and eventually established the Church of God among the Nephites, so Abinadi’s death was not in vain.",fact: "", img: "none"},
     { name: "Alma the Younger", link: "alma-the-younger", id: 2, year: "144BC-73BC", word_count: 19981, description: "Alma, Son of Alma, was probably born at about the time his father was converted to the Gospel by the words of Abinadi, which means Alma was an adult when he and the sons of Mosiah rebelled against the Church and were subsequently converted to the Gospel after being visited by an Angel of the Lord. Alma’s conversion was evident through his commitment to watch over the Church and preach the Gospel. In fact, Alma gave up his position as Chief Judge over the Nephites in order to dedicate his time solely to the ministry (Alma 4:20). In addition to preaching throughout the land, Alma confronted both Nehor and Korihor, the anti-Christs. He also led the Nephites in battle against the Amlicites and revealed, by the Spirit of Prophecy, Lamanite positions to both Captain Zoram and Captain Moroni to help them gain tactical advantages over the Lamanites (Alma 16:5-6; 43:23-24).", fact: "Did You Know that in nearly all of Alma’s sermons contain allusions to his experience with the angel and his conversion?", img: "none"},
     { name: "Ammon", link: "ammon", id: 3, year: "130BC-60BC", word_count: 197, description: "Ammon was so dedicated to preaching the Gospel that he rejected his right to be king in order to lead a fourteen-year mission to the Lamanites. Within days of starting his mission, Ammon was taken before King Lamoni who, apparently knowing that Ammon was of royal heritage, offered to give Ammon one of his daughters to marry. But Ammon was committed to the work and volunteered to be Lamoni’s servant instead. Ammon’s service and courage at the water of Sebus led not only to the conversion of Lamoni and his family, but eventually to the conversion of several Lamanite cities.", fact: "Did you know that the Lamanites’ dramatic conversion reminded Ammon of his own?", img: "none"},
@@ -23,7 +24,7 @@ const SpeakerListShort = ( ) => {
 
 
   ];
-  
+  const speakers = data.speakers
 
   return ( 
     
