@@ -24,12 +24,15 @@ const Navbar = () => {
     'Mosiah',
     'Nephi, Son of Helaman',
     'Nephi, Son of Lehi',
-    'Pahoran',
+    'Pahoran'
    ];
   const speakersExpandableStyle = {
     position: 'absolute',
     top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
     left: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().left : '0',
+    backgroundColor: 'white',
+    padding: '1vw',
+    border: '1px solid black'
   };
 
   const toolboxTitleRef = useRef(null);
@@ -38,12 +41,15 @@ const Navbar = () => {
     'Word Cloud',
     'Connections',
     'Network Diagram',
-    'Audio',
+    'Audio'
    ];
   const toolboxExpandableStyle = {
     position: 'absolute',
     top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom : '0',
-    left: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().left : '0'
+    left: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().left : '0',
+    backgroundColor: 'white',
+    padding: '1vw',
+    border: '1px solid black'
   }
   
   const toggleIsHovering = (index) => {

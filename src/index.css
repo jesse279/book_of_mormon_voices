@@ -78,8 +78,8 @@ p {
 }
 
 .content {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 95vw;
+  margin: auto;
   padding: 20px;
 }
 

@@ -1,7 +1,7 @@
 const Toolbox = () => {
   return ( 
     <div>
-      Toolbox
+      <h2 style={{paddingLeft: '2.8vw', paddingTop: '1vw'}}>Toolbox</h2>
     </div>
    );
 }
