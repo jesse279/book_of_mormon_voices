@@ -1,6 +1,7 @@
 import { useParams, useNavigate} from "react-router-dom";
 import { useState, useEffect } from 'react';
 import data from "./speaker_data.json";
+import ImageLoader from "./ImageLoader";
 
 
 const SpeakerDetails = () => {
@@ -31,9 +32,9 @@ const SpeakerDetails = () => {
     <div>
       <div>
         <div>
-          <img src={require("./images/Pahoran.jpg")}/>
           
-          { speaker.img }
+          <img src={ImageLoader(speaker.img)}></img>
+          
         </div>
         <div>
           <h3>

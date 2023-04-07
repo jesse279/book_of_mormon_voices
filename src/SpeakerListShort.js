@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import thumbnail from './images/capt_moroni.jpg';
 import data from "./speaker_data.json";
+import ImageLoader from "./ImageLoader";
 
 const SpeakerListShort = ( ) => {
   const old_speakers = [
@@ -34,7 +34,7 @@ const SpeakerListShort = ( ) => {
         <div className="blog-preview" key={speaker.id}>
           <Link to={ '/speakers/' + speaker.link }>
             <h2>{ speaker.name }</h2>
-            <img src={thumbnail} alt="" />
+            <img src={ImageLoader(speaker.img)} alt="" />
           </Link>
 
 
