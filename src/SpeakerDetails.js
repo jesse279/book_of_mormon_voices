@@ -31,22 +31,21 @@ const SpeakerDetails = () => {
   return ( 
     <div>
       <div>
-        <div>
+        <div className="speakerdetail-imgbox">
           
-          <img src={ImageLoader(speaker.img)}></img>
+          <img className="speakerdetail-img" src={ImageLoader(speaker.img)}></img>
           
         </div>
-        <div>
-          <h3>
+        <div className="speaker-content">
+          <h3 className="speaker-title">
             { speaker.name }
           </h3>
-          <p>
+          <p className="speaker-description">
             { speaker.description }
           </p>
         </div>
-        { speaker.name }
       </div>
-      <div>
+      <div className="speaker-fact">
         { speaker.fact }
       </div>
     </div>
