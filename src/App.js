@@ -6,7 +6,7 @@ import Home from './Home';
 import NotFound from './NotFound';
 import About from './About';
 import FAQ from './FAQ';
-import Speakers from './Speakers';
+import SpeakersAll from './SpeakersAll';
 import SpeakerDetails from './SpeakerDetails';
 import Toolbox from './Toolbox';
 import Timeline from './Timeline';
@@ -40,7 +40,7 @@ const handleNavHoverMenuExpansion = () => {
             <Route path="/" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/faq" element={<FAQ/>}></Route>
-            <Route path="/speakers" element={<Speakers/>}></Route>
+            <Route path="/speakers" element={<SpeakersAll/>}></Route>
             <Route path="/speakers/:speaker_tag" element={<SpeakerDetails/>}></Route>
             <Route path="/toolbox" element={<Toolbox/>}></Route>
             <Route path="/toolbox/timeline" element={<Timeline/>}></Route>
