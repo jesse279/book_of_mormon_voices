@@ -108,14 +108,33 @@ p {
 
 .speaker-list-all {
   display: flex;
+  flex-wrap: wrap;
 
+}
+
+.speaker-list-all h4 {
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .speaker-preview-2 {
   border:#333;
-  padding: 5px;
+  padding: 25px;
+
+}
+
+.speaker-name-wordcount {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:first baseline;
+  font-size: 12px;
+}
+
+.speaker-name-wordcount h4:last-of-type {
+  margin-left: auto;
 }
 
 .speakerall-img {
-  height: 100px;
+  height: 200px;
 }

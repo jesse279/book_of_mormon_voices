@@ -14,9 +14,9 @@ const SpeakersAll = ( ) => {
         <Link to={ '/speakers/' + speaker.link }>
           
           <img className="speakerall-img"   src={ImageLoader(speaker.img)} alt="" />
-          <div>
+          <div className="speaker-name-wordcount">
             <h4>{ speaker.name }</h4>
-            <h4>{ speaker.word_count} </h4>
+            <h4>Word Count: { speaker.word_count} </h4>
           </div>
         </Link>
 
