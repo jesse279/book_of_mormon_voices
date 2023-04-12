@@ -138,3 +138,13 @@ p {
 .speakerall-img {
   height: 200px;
 }
+
+.content-toolbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.toolbox-item {
+  padding: 40px;
+
+}
