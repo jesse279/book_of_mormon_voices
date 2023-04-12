@@ -22,7 +22,7 @@ const SpeakerListShort = () => {
     <div className="speaker-list-short">
       <div className="carousel-container">
         {speakers.slice(start, end).map((speaker) => (
-          <div className="speaker-card" key={speaker.id} style={{ width: 'calc(81.1vw/8)', margin: '0.6vw'}}>
+          <div className="speaker-card" key={speaker.id} style={{ width: 'calc(80vw/8)', margin: '0.6vw'}}>
             <Link to={"/speakers/" + speaker.link}>
               <img
                 src={ImageLoader(speaker.img)}
