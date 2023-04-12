@@ -17,7 +17,7 @@ const Home = () => {
   const bannerBulletSymbol = '>'
 
   return ( 
-    <div className="home">
+    <>
       <div className="banner">
         <h2 className='main-banner-text' style={{ marginLeft: bannerTextLeftMargin, marginRight: '23vw', paddingTop: '3.44418537486vw'}}><em>You've read our words. Pondered our stories.</em></h2>
         <h1 className='main-banner-text' style={{ marginLeft: bannerTextLeftMargin, marginRight: '35vw', paddingTop: '3.44418537486vw' }}><em>Now, hear our voice</em></h1>
@@ -34,10 +34,8 @@ const Home = () => {
           ))}
         </ol>
       </div>
-      <div>
-        <SpeakerListShort/>
-      </div>
-    </div>
+      <SpeakerListShort/>
+    </>
    );
 }
  
