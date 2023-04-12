@@ -73,6 +73,30 @@ p {
   color: #f1356d;
 }
 
+.speaker-list-short {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.blog-preview {
+  flex: 0 0 12.5%;
+  margin-right: 10px;
+}
+
+.blog-preview:last-of-type {
+  margin-right: 0;
+}
+
+.carousel-container {
+  width: 98vw;
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: flex-start;
+}
+
 .down-carrot {
   font-size: small;
 }
@@ -81,6 +105,12 @@ p {
   max-width: 95vw;
   margin: auto;
   padding: 20px;
+}
+
+.carousel-btn {
+  margin-top: 1.6vw;
+  box-sizing: border-box;
+  height: 10vw;
 }
 
 .banner {
