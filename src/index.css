@@ -116,9 +116,8 @@ p {
 .banner {
   background-image: url('./images/Nephi_banner.jpg');
   background-size: cover;
-  height: min(45vw, 80vh);
+  height: min(45vw, 92vh);
 }
-
 
 .main-banner-text {
   padding-left: 1.5vw;
