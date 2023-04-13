@@ -40,8 +40,8 @@ const Navbar = () => {
     'Timeline',
     'Word Cloud',
     'Connections',
-    'Network Diagram',
-    'Audio'
+    'Network Diagram'
+    
    ];
   const toolboxExpandableStyle = {
     position: 'absolute',

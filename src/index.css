@@ -146,5 +146,13 @@ p {
 
 .toolbox-item {
   padding: 40px;
+  height: 250px;
+  width: 300px;
+}
 
+.toolbox-item img {
+  object-fit: cover;
+  height: 250px;
+  width: 300px;
+  object-position: right top;
 }
