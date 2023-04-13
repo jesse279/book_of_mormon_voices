@@ -26,6 +26,26 @@ const Navbar = () => {
     'Nephi, Son of Lehi',
     'Pahoran'
    ];
+
+   const speakersExpandableLinks = [
+    '/speakers/abinadi', 
+    '/speakers/alma-the-younger', 
+    '/speakers/ammon', 
+    '/speakers/amulek', 
+    '/speakers/benjamin', 
+    '/speakers/captain-moroni', 
+    '/speakers/giddianhi',
+    '/speakers/helaman',
+    '/speakers/jacob',
+    '/speakers/korihor',
+    '/speakers/lehi',
+    '/speakers/mormon',
+    '/speakers/moroni',
+    '/speakers/mosiah',
+    '/speakers/nephi-son-of-helaman',
+    '/speakers/nephi-son-of-lehi',
+    '/speakers/pahoran'
+   ]
   const speakersExpandableStyle = {
     position: 'absolute',
     top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
@@ -43,6 +63,13 @@ const Navbar = () => {
     'Network Diagram'
     
    ];
+
+  const toolboxExpandableLinks = [
+    '/toolbox/timeline',
+    '/toolbox/word-cloud',
+    '/toolbox/connections',
+    '/toolbox/network-diagram'
+  ]
   const toolboxExpandableStyle = {
     position: 'absolute',
     top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom : '0',
@@ -75,7 +102,7 @@ const Navbar = () => {
           Speakers
           <span className="down-carrot"> &#9660;</span>
           {isHovering[0] && (
-            <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={speakersExpandableItems} style={speakersExpandableStyle}></NavBarExpansion>
+            <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={speakersExpandableStyle}></NavBarExpansion>
           )}
         </Link>
         <Link to="/faq" className='nav-header'>FAQ</Link>
@@ -83,7 +110,7 @@ const Navbar = () => {
           Toolbox
           <span className="down-carrot nav-header"> &#9660;</span>
           {isHovering[1] && (
-              <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={toolboxExpandableItems} style={toolboxExpandableStyle}></NavBarExpansion>        
+              <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
           )}
         </Link>
 

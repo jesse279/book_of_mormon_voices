@@ -1,8 +1,16 @@
-const NavBarExpansion = ({className, expandableItems, style}) => {
+import { Link } from 'react-router-dom';
+
+const NavBarExpansion = ({className, expandableItems, expandableLinks, style}) => {
     const itemsList = [...expandableItems];
+    const linksList = [...expandableLinks]
     
     const divList = itemsList.map((item, index) => (
-        <div key={index}>{item}</div>
+        <Link to={linksList[index]} className='nav-expansion'>
+            <div key={index}>
+                {item}
+            </div>
+        </Link>
+        
     ));
 
     const additionalComponentStyles = {};
