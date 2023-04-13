@@ -73,6 +73,30 @@ p {
   color: #f1356d;
 }
 
+.speaker-list-short {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.5vw;
+}
+
+.blog-preview {
+  flex: 0 0 12.5%;
+  margin-right: 10px;
+}
+
+.blog-preview:last-of-type {
+  margin-right: 0;
+}
+
+.carousel-container {
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: flex-start;
+}
+
 .down-carrot {
   font-size: small;
 }
@@ -83,12 +107,17 @@ p {
   padding: 20px;
 }
 
+.carousel-btn {
+  margin-top: 0.7vw;
+  box-sizing: border-box;
+  height: 10vw;
+}
+
 .banner {
   background-image: url('./images/Nephi_banner.jpg');
   background-size: cover;
-  height: min(45vw, 80vh);
+  height: min(45vw, 92vh);
 }
-
 
 .main-banner-text {
   padding-left: 1.5vw;
