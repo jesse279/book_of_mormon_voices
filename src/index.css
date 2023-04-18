@@ -196,3 +196,13 @@ p {
   padding: 0.1vw;
   margin: 0px;
 }
+
+.collapsible .content {
+  padding: 6px;
+  background-color: #eeeeee;
+}
+.collapsible .header {
+  background-color: #dddddd;
+  padding: 6px;
+  cursor: pointer;
+}

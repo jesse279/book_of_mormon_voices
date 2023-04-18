@@ -1,42 +1,28 @@
-import React from 'react';
-import useCollapse from 'react-collapsed';
-import './App.css';
-function Collapsible(props) {
-    const config = {
-        duration: 2000,
-        onExpandStart: () => {
-            console.log('INFO: onExpandStart triggered.');
-        },
-        onExpandEnd: () => {
-            console.log('INFO: onExpandEnd triggered.');
-        },
-        onCollapseStart: () => {
-            console.log('INFO: onCollapseStart triggered.');
-        },
-        onCollapseEnd: () => {
-            console.log('INFO: onCollapseEnd triggered.');
-        }
-    };
-    const { getCollapseProps, getToggleProps, isExpanded } = useCollapse(config);
-return (
-    <div className="collapsible">
-        <div className="header" {...getToggleProps()}>
-            {isExpanded ? 'Collapse' : 'Expand'}
-        </div>
-        <div {...getCollapseProps()}>
-            <div className="content">
-                {props.children}
+import React, { useState } from 'react';
+import { useCollapse } from 'react-collapsed';
+import { useParams} from "react-router-dom";
+
+const Collapsible = ({header_text, body_text}) => {
+  const [ isExpanded, setExpanded ] = useState(false);
+  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+  function handleOnClick() {
+      // Do more stuff with the click event!
+      // Or, set isExpanded conditionally 
+      setExpanded(!isExpanded);
+  }
+
+  return (
+        <div className="collapsible">
+            <div className="header" {...getToggleProps({onClick: handleOnClick})}>
+                { header_text }
+            </div>
+            <div {...getCollapseProps()}>
+                <div className="content">
+                    { body_text }
+                </div>
             </div>
         </div>
-    </div>
-    );
+  );
 }
-function App() {
-    return (
-    <Collapsible>
-        Now you can see the hidden content. <br/><br/>
-        Click again to hide ...
-    </Collapsible>
-    );
-}
-export default App;
+
+export default Collapsible;
