@@ -27,25 +27,12 @@ const Navbar = () => {
     'Pahoran'
    ];
 
-   const speakersExpandableLinks = [
-    '/speakers/abinadi', 
-    '/speakers/alma-the-younger', 
-    '/speakers/ammon', 
-    '/speakers/amulek', 
-    '/speakers/benjamin', 
-    '/speakers/captain-moroni', 
-    '/speakers/giddianhi',
-    '/speakers/helaman',
-    '/speakers/jacob',
-    '/speakers/korihor',
-    '/speakers/lehi',
-    '/speakers/mormon',
-    '/speakers/moroni',
-    '/speakers/mosiah',
-    '/speakers/nephi-son-of-helaman',
-    '/speakers/nephi-son-of-lehi',
-    '/speakers/pahoran'
-   ]
+   const speakersExpandableLinks = speakersExpandableItems.map(speakerExpandableItem => {
+    console.log(`${window.location.protocol}//localhost:${window.location.port}/speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`);
+    return `${window.location.protocol}//localhost:${window.location.port}/speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`;
+   });
+
+   
   const speakersExpandableStyle = {
     position: 'absolute',
     top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
