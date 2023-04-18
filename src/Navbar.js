@@ -61,7 +61,6 @@ const Navbar = () => {
     top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom : '0',
     left: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().left : '0',
     backgroundColor: 'white',
-    padding: '1vw',
     border: '1px solid black'
   }
   
@@ -94,7 +93,7 @@ const Navbar = () => {
         <Link to="/faq" className='nav-header'>FAQ</Link>
         <Link to="/toolbox" className='nav-header' ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
           Toolbox
-          <span className="down-carrot nav-header"> &#9660;</span>
+          <span className="nav-header"> &#9660;</span>
           {isHovering[1] && (
               <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
           )}
