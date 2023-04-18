@@ -93,7 +93,7 @@ const Navbar = () => {
         <Link to="/faq" className='nav-header'>FAQ</Link>
         <Link to="/toolbox" className='nav-header' ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
           Toolbox
-          <span className="nav-header"> &#9660;</span>
+          <span className="down-carrot"> &#9660;</span>
           {isHovering[1] && (
               <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
           )}
