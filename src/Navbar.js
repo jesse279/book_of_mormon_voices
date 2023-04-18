@@ -38,7 +38,6 @@ const Navbar = () => {
     top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
     left: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().left : '0',
     backgroundColor: 'white',
-    padding: '1vw',
     border: '1px solid black'
   };
 
@@ -89,7 +88,7 @@ const Navbar = () => {
           Speakers
           <span className="down-carrot"> &#9660;</span>
           {isHovering[0] && (
-            <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={speakersExpandableStyle}></NavBarExpansion>
+            <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={speakersExpandableStyle}></NavBarExpansion>
           )}
         </Link>
         <Link to="/faq" className='nav-header'>FAQ</Link>
@@ -97,7 +96,7 @@ const Navbar = () => {
           Toolbox
           <span className="down-carrot nav-header"> &#9660;</span>
           {isHovering[1] && (
-              <NavBarExpansion className = 'navbar-expanded-menu nav-header' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
+              <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
           )}
         </Link>
 

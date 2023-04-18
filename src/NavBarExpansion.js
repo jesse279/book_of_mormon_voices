@@ -5,12 +5,7 @@ const NavBarExpansion = ({className, expandableItems, expandableLinks, style}) =
     const linksList = [...expandableLinks]
     
     const divList = itemsList.map((item, index) => (
-        <Link to={linksList[index]} className='nav-expansion'>
-            <div key={index}>
-                {item}
-            </div>
-        </Link>
-        
+        <Link to={linksList[index]} className='nav-expansion' style={{padding: '0.3vw', margin: '0px'}}>{item}</Link>
     ));
 
     const additionalComponentStyles = {};

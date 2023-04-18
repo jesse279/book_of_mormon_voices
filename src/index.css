@@ -185,3 +185,14 @@ p {
   width: 300px;
   object-position: right top;
 }
+
+.navbar-expanded-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.nav-expansion {
+  padding: 0.1vw;
+  margin: 0px;
+}
