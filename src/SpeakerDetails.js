@@ -2,6 +2,7 @@ import { useParams, useNavigate} from "react-router-dom";
 import { useState, useEffect } from 'react';
 import data from "./speaker_data.json";
 import ImageLoader from "./ImageLoader";
+import Collapsible from './Collapsible.js';
 
 
 const SpeakerDetails = () => {
@@ -46,7 +47,7 @@ const SpeakerDetails = () => {
         </div>
       </div>
       <div className="speaker-fact">
-        { speaker.fact }
+        { speaker.fact_1 &&  <Collapsible header_text="Header" body_text="Body"/>}
       </div>
     </div>
 
