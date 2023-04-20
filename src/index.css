@@ -17,6 +17,11 @@ p {
 
 .logo {
   height: 10vh;
+  padding-right: 35px;
+}
+
+.page-title {
+  font-size: 35px;
 }
 
 .home {
