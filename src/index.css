@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
+@font-face {
+  font-family: GT Alpina;
+  src: url("./fonts/GT Alpina/gt alpina ttf/GTAlpina-Rg.ttf");
+}
 
 /* base styles */
 * {
   margin: 0px;
-  font-family: 'EB Garamond', serif;
+  font-family: 'GT Alpina';
   color: #333;
 }
 
@@ -22,6 +26,7 @@ p {
 
 .page-title {
   font-size: 35px;
+  padding-bottom: 30px;
 }
 
 .home {
