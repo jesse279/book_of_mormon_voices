@@ -17,6 +17,11 @@ p {
 
 .logo {
   height: 10vh;
+  padding-right: 35px;
+}
+
+.page-title {
+  font-size: 35px;
 }
 
 .home {
@@ -195,4 +200,14 @@ p {
 .nav-expansion {
   padding: 0.1vw;
   margin: 0px;
+}
+
+.collapsible .content {
+  padding: 6px;
+  background-color: #eeeeee;
+}
+.collapsible .header {
+  background-color: #dddddd;
+  padding: 6px;
+  cursor: pointer;
 }
