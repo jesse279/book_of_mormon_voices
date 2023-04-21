@@ -16,7 +16,7 @@ p {
 }
 
 .test-mark {
-  background-color: red;
+  background-color: #83B9F7;
 }
 
 .logo {
@@ -59,7 +59,7 @@ p {
 
 .navbar h1 {
   font-size: 4rem;
-  color: #f1356d;
+  color: #83B9F7;
 }
 
 .navbar .links {
@@ -80,7 +80,7 @@ p {
 }
 
 .navbar a:hover {
-  color: #f1356d;
+  color: #83B9F7;
 }
 
 .speaker-list-short {
