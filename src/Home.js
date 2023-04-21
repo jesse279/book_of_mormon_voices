@@ -29,8 +29,8 @@ const Home = () => {
         </p>
         <ol className='main-banner-text' style={{ marginLeft: defaultIndent, paddingTop: '3.44418537486vw' }}>
           {links.map(([text, url], index) => (
-            <Link to={url}>
-              <h2 key={index} style={{ paddingTop: '0.25vw', paddingBottom: '0.25vw'}}>{bannerBulletSymbol} {text}</h2>
+            <Link to={url} key={index}>
+              <h2 style={{ paddingTop: '0.25vw', paddingBottom: '0.25vw'}}>{bannerBulletSymbol} {text}</h2>
             </Link>
           ))}
         </ol>

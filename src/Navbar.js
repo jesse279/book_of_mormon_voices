@@ -28,10 +28,8 @@ const Navbar = () => {
    ];
 
    const speakersExpandableLinks = speakersExpandableItems.map(speakerExpandableItem => {
-    console.log(`${window.location.protocol}//localhost:${window.location.port}/speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`);
-    return `${window.location.protocol}//localhost:${window.location.port}/speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`;
+    return `speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`;
    });
-
    
   const speakersExpandableStyle = {
     position: 'absolute',
@@ -47,7 +45,6 @@ const Navbar = () => {
     'Word Cloud',
     'Connections',
     'Network Diagram'
-    
    ];
 
   const toolboxExpandableLinks = [
@@ -65,7 +62,6 @@ const Navbar = () => {
   }
   
   const toggleIsHovering = (index) => {
-    console.log('toggleIsHovering');
     const newHovering = [...isHovering];
     newHovering[index] = !newHovering[index];
     setIsHovering(newHovering);
