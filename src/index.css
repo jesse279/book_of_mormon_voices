@@ -39,7 +39,7 @@
 * {
   margin: 0px;
   font-family: 'GT Alpina';
-  font-size: min(36px, 5vw);
+  font-size: min(36px, 3vw);
   color: #333;
 }
 
@@ -86,7 +86,9 @@ This is 8.333 inches.
 }
 
 .icon {
-  height: var(--logo-height);
+  height: min(1in, 10vw);
+  padding: 20%;
+  box-sizing: border-box;
 }
 
 .home {
@@ -107,6 +109,47 @@ This is 8.333 inches.
   max-width: auto;
   border-bottom: 1px solid #f2f2f2; 
   height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-header {
+  padding: 1vw;
+}
+
+.nav-hamburger-menu {
+  visibility: hidden;
+  position: absolute;
+}
+
+.hamburger-svg {
+  height: 5vw;
+}
+
+@media (min-width: 1296px) {
+  .nav-links {
+    visibility: visible;
+    position: relative;
+  }
+  .nav-hamburger-menu {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+@media (max-width: 1296px) {
+  .nav-links {
+    visibility: hidden;
+    position: absolute;
+  }
+  .nav-hamburger-menu {
+    visibility: visible;
+    position: relative;
+  }
 }
 
 .nav-title {

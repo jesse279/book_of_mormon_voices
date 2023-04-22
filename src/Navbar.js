@@ -3,6 +3,7 @@ import logo from './images/SC-Book-Of-Mormon-Central-Favicon-Black-32px.png';
 import icon from './images/icon.png';
 import { useState, useEffect, useRef } from 'react';
 import NavBarExpansion from './NavBarExpansion';
+import navHamburgerMenu from './images/hamburger-menu.svg';
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState([false, false]);
@@ -102,8 +103,10 @@ const Navbar = () => {
         </Link>
 
       </div>
+      <svg className='nav-hamburger-menu'>
+        <image class='hamburger-svg' href={navHamburgerMenu}/>
+      </svg>
     </nav>
-
   );
 }
  
