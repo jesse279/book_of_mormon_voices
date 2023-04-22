@@ -11,6 +11,24 @@ const SpeakerDetails = () => {
   const speakers = data.speakers;
   const history = useNavigate();
   const [speaker, setSpeaker] = useState(speakers[0]);
+  
+  useEffect(() => {
+    const currentSpeaker = speakers.filter((speaker) => {
+      return speaker.link === speaker_tag;
+    });
+    
+    if (currentSpeaker.length > 0) {
+      setSpeaker(currentSpeaker[0]);
+
+    }
+    else {
+      history.push('/Home');
+    }
+    
+    // console.log(currentSpeaker);
+  }, []);
+
+
 
   const speakerObject = speakers.reduce((acc, curr) => curr.link === speaker_tag ? curr : acc, null);
 
