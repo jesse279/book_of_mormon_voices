@@ -1,4 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
+/* brand colors */
+:root {
+  --primary-blue: #83B9F7;
+  --primary-yellow: #E8E200;
+  --primary-lavender: #DCB8F6;
+  --primary-orange: #FF7700;
+  --primary-pink: #FF80B8;
+
+  --secondary-blue-light: #2A85F4;
+  --secondary-blue-med: #265992;
+  --secondary-blue-dark: #1A3251;
+
+  --secondary-green-light: #8BD392;
+  --secondary-green-med: #269375;
+  --secondary-green-dark: #004C4F;
+  
+  --secondary-purple-light: #EEE3FF;
+  --secondary-purple-med: #9A95E1;
+  --secondary-purple-dark: #5C50BD;
+
+  --secondary-yellow-light: #F3E6BB; /*HEX ON BRAND GUIDELINES IS INCORRECT AND PRODUCES A LIGHT BLUE COLOR (TODO)*/
+  --secondary-yellow-med: #FFCE45;
+  --secondary-yellow-dark: #FF9E00;
+
+  --secondary-pink-light: #FFE6FF;
+  --secondary-pink-med: #FFB2E5;
+  --secondary-pink-dark: #EA5FD8;
+}
 
 /* base styles */
 * {
