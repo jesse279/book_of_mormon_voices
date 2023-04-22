@@ -69,14 +69,12 @@ const Navbar = () => {
 
   return (  
     <nav className="navbar">
-      <div className="header-item logo-main flex-wrap">
         <Link to="/">
           <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
         </Link>
         <Link to="/">
           <h2 className="page-title">Book of Mormon <em>Explorer</em></h2>
         </Link>
-      </div>
 
       <div className="links">
         <Link to="/" className='nav-header'>Home</Link>
