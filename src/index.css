@@ -3,7 +3,7 @@
   font-family: GT Alpina;
   src: url("./fonts/GT Alpina/gt alpina ttf/GTAlpina-Rg.ttf");
 }
-/* brand colors */
+/* brand colors and other variables*/
 :root {
   --primary-blue: #83B9F7;
   --primary-yellow: #E8E200;
@@ -30,6 +30,9 @@
   --secondary-pink-light: #FFE6FF;
   --secondary-pink-med: #FFB2E5;
   --secondary-pink-dark: #EA5FD8;
+
+  --logo-height: 12vw;
+  --min-logo-height-inches: 1;
 }
 
 /* base styles */
@@ -48,9 +51,42 @@ p {
   background-color: #83B9F7;
 }
 
+/* 
+Since logo max height is: 1 inch
+And logo display height is: 12vw
+The minimum screen width to display the logo is: 1 * (100 / 12) inches.
+This is 8.333 inches.
+*/
+@media (min-width: 8.333in) {
+  .icon {
+    visibility: hidden;
+    position: absolute;
+  }
+  .logo {
+    visibility: visible;
+    position: relative;
+  }
+}
+
+@media (max-width: 8.333in) {
+  .icon {
+    visibility: visible;
+    position: relative;
+  }
+  .logo {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
 .logo {
-  height: 10vh;
-  padding-right: 35px;
+  height: var(--logo-height);
+  padding: 20%; /*brand guidelines for spacing around logo*/
+  box-sizing: border-box;
+}
+
+.icon {
+  height: var(--logo-height);
 }
 
 .home {
@@ -65,42 +101,23 @@ p {
 }
 
 .navbar {
-  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-around;
   max-width: auto;
-  margin: 0 auto;
   border-bottom: 1px solid #f2f2f2; 
-  height: 8vw;
+  height: auto;
 }
 
-.navbar div {
-  margin: auto;
-  
-  border: 0px solid black;
-}
-
-.navbar h1 {
-  font-size: 4rem;
-  color: #83B9F7;
-}
-
-.navbar .links {
-  margin-left: auto;
-  padding: 5px;
-  font: 20px;
-}
-
-.navbar .logo-main {
-  margin: auto;
+.nav-title {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar a {
-  margin: 10px;
-  margin-left: 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 0.6rem;
 }
 
 .navbar a:hover {

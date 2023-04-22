@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from './images/SC-Book-Of-Mormon-Central-Favicon-Black-32px.png';
+import icon from './images/icon.png';
 import { useState, useEffect, useRef } from 'react';
 import NavBarExpansion from './NavBarExpansion';
 
@@ -69,14 +70,19 @@ const Navbar = () => {
 
   return (  
     <nav className="navbar">
+      <div className="nav-title">
         <Link to="/">
-          <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
+            <img className='logo' src={logo} alt="Book of Mormon Voices Logo"/>
+        </Link>
+        <Link>
+          <img className='icon' src={icon} alt="Book of Mormon Voices Icon"/>
         </Link>
         <Link to="/">
-          <h2 className="page-title">Book of Mormon <em>Explorer</em></h2>
+            <h2 className="page-title">BOOK OF MORMON EXPLORER</h2>
         </Link>
+      </div>
 
-      <div className="links">
+      <div className="nav-links">
         <Link to="/" className='nav-header'>Home</Link>
         <Link to="/about" className='nav-header'>About</Link>
         <Link to="/speakers" className='nav-header' ref={speakersTitleRef} onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
