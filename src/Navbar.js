@@ -101,7 +101,6 @@ const Navbar = () => {
               <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
           )}
         </Link>
-
       </div>
       <svg className='nav-hamburger-menu'>
         <image class='hamburger-svg' href={navHamburgerMenu}/>
