@@ -38,13 +38,18 @@
 /* base styles */
 * {
   margin: 0px;
+  padding: 0px;
   font-family: 'GT Alpina';
   font-size: max(min(36px, 3vw), 16px);
   color: #333;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 p {
-  font-size: 22px;
+  font-size: 0.61rem;
 }
 
 .test-mark {
@@ -222,6 +227,10 @@ This is 8.333 inches.
   background-image: url('./images/Nephi_banner.jpg');
   background-size: cover;
   height: min(45vw, 92vh);
+}
+
+.main-banner-header {
+  padding-left: 1.5vw;
 }
 
 .main-banner-text {

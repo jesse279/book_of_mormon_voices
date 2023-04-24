@@ -20,8 +20,8 @@ const Home = () => {
   return ( 
     <>
       <div className="banner" style={{ marginBottom: '0.2vw' }}>
-        <h2 className='main-banner-text' style={{ marginLeft: defaultIndent, marginRight: '23vw', paddingTop: '3.44418537486vw'}}><em>You've read our words. Pondered our stories.</em></h2>
-        <h1 className='main-banner-text' style={{ marginLeft: defaultIndent, marginRight: '35vw', paddingTop: '3.44418537486vw' }}><em>Now, hear our voice</em></h1>
+        <h1 className='main-banner-header' style={{ marginLeft: defaultIndent, marginRight: '30vw', paddingTop: '1vw'}}><em>You've read our words. Pondered our stories.</em></h1>
+        <h1 className='main-banner-header' style={{ marginLeft: defaultIndent, marginRight: '35vw' }}><em>Now, hear our voice</em></h1>
         <p className='main-banner-text' style={{ marginLeft: defaultIndent, marginRight: '43vw', paddingTop: '2.12862362522vw' }}>
           Through careful research, advanced data analyzation, and 
           compelling stylometry, scholars have discovered a fascinating 
