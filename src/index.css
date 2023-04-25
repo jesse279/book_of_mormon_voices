@@ -49,7 +49,7 @@ h1 {
 }
 
 p {
-  font-size: 0.61rem;
+  font-size: 0.75rem;
 }
 
 .test-mark {
@@ -64,23 +64,19 @@ This is 8.333 inches.
 */
 @media (min-width: 8.333in) {
   .icon {
-    visibility: hidden;
-    position: absolute;
+    display: none;
   }
   .logo {
-    visibility: visible;
-    position: relative;
+    display: block;
   }
 }
 
 @media (max-width: 8.333in) {
   .icon {
-    visibility: visible;
-    position: relative;
+    display: block;
   }
   .logo {
-    visibility: hidden;
-    position: absolute;
+    display: none;
   }
 }
 
@@ -234,11 +230,99 @@ This is 8.333 inches.
 }
 
 .main-banner-text {
-  padding-left: 1.5vw;
+  padding-top: 1.5vw;
+  padding-left: 7.4vw;
+}
+
+.main-banner-links {
+  padding-top: 3.44vw;
+}
+
+.main-banner-link {
+  padding-top: 0.25vw;
+  padding-bottom:0.25vw;
+  font-size: 0.8rem;
 }
 
 
+@media (min-width: 1330px) {
+  .main-banner-links {
+    display:block;
+  }
+}
 
+@media (max-width: 1330px) {
+  .main-banner-links {
+    display: none;
+  }
+}
+
+p.main-banner-text {
+  padding-top: 2.1286vw;
+}
+
+@media (min-width: 1560px) {
+  p.main-banner-text {
+    padding-right: 35vw;
+  }
+}
+@media (min-width: 1410px) and (max-width: 1560px) {
+  p.main-banner-text {
+    padding-right: 37vw;
+  }
+}
+@media (min-width: 1352px) and (max-width: 1410px) {
+  p.main-banner-text {
+    padding-right: 41vw;
+  }
+}
+@media (min-width: 1228px) and (max-width: 1352px) {
+  p.main-banner-text {
+    padding-right: 43vw;
+  }
+}
+@media (min-width: 526px) and (max-width: 1228px) {
+  p.main-banner-text {
+    padding-right: 49vw;
+  }
+}
+
+@media (min-width: 526px) {
+  p.main-banner-text {
+    display:block;
+  }
+  p.backup-banner-text {
+    display: none;
+  }
+}
+
+@media (max-width: 526px) {
+  p.main-banner-text {
+    display: none;
+  }
+  p.backup-banner-text {
+    display: block;
+    margin-right: 50vw;
+  }
+}
+
+@media (max-width: 436px) {
+  p.backup-banner-text {
+    margin-right: 55vw;
+  }
+}
+
+@media (max-width: 422px) {
+  p.backup-banner-text {
+    margin-right: 60vw;
+  }
+}
+
+@media (max-width: 380px) {
+  p.backup-banner-text {
+    display: none;
+  }
+}
 
 .speakerdetail-img {
   height: 100px;

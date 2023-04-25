@@ -20,17 +20,20 @@ const Home = () => {
   return ( 
     <>
       <div className="banner" style={{ marginBottom: '0.2vw' }}>
-        <h1 className='main-banner-header' style={{ marginLeft: defaultIndent, marginRight: '30vw', paddingTop: '1vw'}}><em>You've read our words. Pondered our stories.</em></h1>
+        <h1 className='main-banner-header' style={{ marginLeft: defaultIndent, marginRight: '30vw', paddingTop: '1vw', lineHeight: '0.55' }}><em>You've read our words. Pondered our stories.</em></h1>
         <h1 className='main-banner-header' style={{ marginLeft: defaultIndent, marginRight: '35vw' }}><em>Now, hear our voice</em></h1>
-        <p className='main-banner-text' style={{ marginLeft: defaultIndent, marginRight: '43vw', paddingTop: '2.12862362522vw' }}>
+        <p className='main-banner-text'>
           Through careful research, advanced data analyzation, and 
           compelling stylometry, scholars have discovered a fascinating 
           way to help each voice in the Book of Mormon come to life.
         </p>
-        <ol className='main-banner-text' style={{ marginLeft: defaultIndent, paddingTop: '3.44418537486vw' }}>
+        <p className='backup-banner-text main-banner-text'>
+          Helping each voice in the Book of Mormon come to life through research and data analysis
+        </p>
+        <ol className='main-banner-text main-banner-links'>
           {links.map(([text, url], index) => (
             <Link to={url} key={index}>
-              <h2 style={{ paddingTop: '0.25vw', paddingBottom: '0.25vw'}}>{bannerBulletSymbol} {text}</h2>
+              <h2 className='main-banner-link'>{bannerBulletSymbol} {text}</h2>
             </Link>
           ))}
         </ol>
