@@ -203,6 +203,10 @@ This is 8.333 inches.
   justify-content: flex-start;
 }
 
+.carousel-btn-container {
+  width: 10vw;
+}
+
 .down-carrot {
   font-size: small;
 }

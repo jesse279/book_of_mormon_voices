@@ -63,21 +63,23 @@ const SpeakerCarousel = () => {
                 alt=""
                 style={{ width: '100%' }}
               />
-              <h2 className='speaker-carousel-label' style={{}}>{speaker.name}</h2>
+              <h2 className='speaker-carousel-label'>{speaker.name}</h2>
             </Link>
           </div>
         ))}
       </div>
-      {start > 0 && (
-        <button className="carousel-btn" onClick={handlePrev}>
-          Prev
-        </button>
-      )}
-      {end < speakers.length && (
-        <button className="carousel-btn" onClick={handleNext}>
-          Next
-        </button>
-      )}
+      <div className='carousel-btn-container' style={{ display: 'flex', justifyContent: `${start === 0 ? 'flex-end' : ''}` }}>
+        {start > 0 && (
+          <button className="carousel-btn" onClick={handlePrev}>
+            Prev
+          </button>
+        )}
+        {end < speakers.length && (
+          <button className="carousel-btn" onClick={handleNext}>
+            Next
+          </button>
+        )}
+      </div>
     </div>
   );
 };
