@@ -11,10 +11,12 @@ const SpeakerListShort = () => {
   const speakers = data.speakers;
   let [start, setStart] = useState(0);
   let [end, setEnd] = useState(speakersInDisplay);
+  let [speakerCarouselPage, setSpeakerCarouselPage] = useState(0);
 
   const handleResize = () => {
     setScreenWidth(window.screen.width);
     speakersInDisplay = Math.floor(5.9 * (Math.log(0.005 * screenWidth)/Math.log(10)) + 2.5);
+    setStart(0);
     setEnd(speakersInDisplay);
   }
 
@@ -23,18 +25,20 @@ const SpeakerListShort = () => {
   const handlePrev = () => {
     setStart(start - speakersInDisplay);
     setEnd(end - speakersInDisplay);
+    setSpeakerCarouselPage(speakerCarouselPage - 1);
   };
 
   const handleNext = () => {
     setStart(start + speakersInDisplay);
     setEnd(end + speakersInDisplay);
+    setSpeakerCarouselPage(speakerCarouselPage + 1);
   };
 
   return (
     <div className="speaker-list-short">
       <div className="carousel-container">
         {speakers.slice(start, end).map((speaker) => (
-          <div className="speaker-card" key={speaker.id} style={{ width: `calc(83vw/${speakersInDisplay}.2)`, margin: '0.6vw'}}>
+          <div className="speaker-card" key={speaker.id} style={{ width: `calc(100%/${speakersInDisplay})`, margin: '0.6vw'}}>
             <Link to={"/speakers/" + speaker.link}>
               <img
                 src={ImageLoader(speaker.img)}
