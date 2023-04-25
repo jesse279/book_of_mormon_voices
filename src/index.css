@@ -345,6 +345,13 @@ p.main-banner-text {
   text-decoration: none;
 }
 
+.speaker-carousel-label {
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 0.75rem;
+}
+
 .speaker-preview-2 {
   border:#333;
   padding: 25px;

@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from "react";
 const SpeakerListShort = () => {
   let [screenWidth, setScreenWidth] = useState(window.screen.width);
 
-  let speakersInDisplay = Math.floor(5.9 * (Math.log(0.005 * screenWidth)/Math.log(10)) + 2.5);
+  let speakersInDisplay = Math.floor(6 * (Math.log(screenWidth)/Math.log(10)) - 10.6 - 0.0002 * screenWidth);
 
   const speakers = data.speakers;
   let [start, setStart] = useState(0);
@@ -15,7 +15,7 @@ const SpeakerListShort = () => {
 
   const handleResize = () => {
     setScreenWidth(window.screen.width);
-    speakersInDisplay = Math.floor(5.9 * (Math.log(0.005 * screenWidth)/Math.log(10)) + 2.5);
+    speakersInDisplay = Math.floor(6 * (Math.log(screenWidth)/Math.log(10)) - 10.6 - 0.0002 * screenWidth);
     setStart(0);
     setEnd(speakersInDisplay);
   }
@@ -45,7 +45,7 @@ const SpeakerListShort = () => {
                 alt=""
                 style={{ width: '100%' }}
               />
-              <h2 style={{ width: "100%", whiteSpace: "normal", wordWrap: "break-word" }}>{speaker.name}</h2>
+              <h2 class='speaker-carousel-label'>{speaker.name}</h2>
             </Link>
           </div>
         ))}
