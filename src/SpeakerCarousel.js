@@ -3,7 +3,7 @@ import data from "./speaker_data.json";
 import ImageLoader from "./ImageLoader";
 import { useState, useRef, useEffect } from "react";
 
-const SpeakerListShort = () => {
+const SpeakerCarousel = () => {
   let [screenWidth, setScreenWidth] = useState(window.screen.width);
 
   let speakersInDisplay = Math.floor(6 * (Math.log(screenWidth)/Math.log(10)) - 10.6 - 0.0002 * screenWidth);
@@ -45,7 +45,7 @@ const SpeakerListShort = () => {
                 alt=""
                 style={{ width: '100%' }}
               />
-              <h2 class='speaker-carousel-label'>{speaker.name}</h2>
+              <h2 className='speaker-carousel-label' style={{}}>{speaker.name}</h2>
             </Link>
           </div>
         ))}
@@ -64,4 +64,4 @@ const SpeakerListShort = () => {
   );
 };
 
-export default SpeakerListShort;
+export default SpeakerCarousel;

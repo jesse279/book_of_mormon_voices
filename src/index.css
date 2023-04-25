@@ -196,7 +196,7 @@ This is 8.333 inches.
 }
 
 .carousel-container {
-  width: 98vw;
+  width: 88vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -410,4 +410,8 @@ p.main-banner-text {
   background-color: #dddddd;
   padding: 6px;
   cursor: pointer;
+}
+
+#home-side-image {
+  clip: rect(0px, 100px, 0px, 100px);
 }

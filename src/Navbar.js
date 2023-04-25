@@ -103,7 +103,7 @@ const Navbar = () => {
         </Link>
       </div>
       <svg className='nav-hamburger-menu'>
-        <image class='hamburger-svg' href={navHamburgerMenu}/>
+        <image className='hamburger-svg' href={navHamburgerMenu}/>
       </svg>
     </nav>
   );
