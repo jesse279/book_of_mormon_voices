@@ -4,25 +4,37 @@ import ImageLoader from "./ImageLoader";
 import { useState, useRef, useEffect } from "react";
 
 const SpeakerListShort = () => {
+  let [screenWidth, setScreenWidth] = useState(window.screen.width);
+
+  let speakersInDisplay = Math.floor(5.9 * (Math.log(0.005 * screenWidth)/Math.log(10)) + 2.5);
+
   const speakers = data.speakers;
-  const [start, setStart] = useState(0);
-  const [end, setEnd] = useState(8);
+  let [start, setStart] = useState(0);
+  let [end, setEnd] = useState(speakersInDisplay);
+
+  const handleResize = () => {
+    setScreenWidth(window.screen.width);
+    speakersInDisplay = Math.floor(5.9 * (Math.log(0.005 * screenWidth)/Math.log(10)) + 2.5);
+    setEnd(speakersInDisplay);
+  }
+
+  window.addEventListener('resize', handleResize);
 
   const handlePrev = () => {
-    setStart(start - 8);
-    setEnd(end - 8);
+    setStart(start - speakersInDisplay);
+    setEnd(end - speakersInDisplay);
   };
 
   const handleNext = () => {
-    setStart(start + 8);
-    setEnd(end + 8);
+    setStart(start + speakersInDisplay);
+    setEnd(end + speakersInDisplay);
   };
 
   return (
     <div className="speaker-list-short">
       <div className="carousel-container">
         {speakers.slice(start, end).map((speaker) => (
-          <div className="speaker-card" key={speaker.id} style={{ width: 'calc(80vw/8)', margin: '0.6vw'}}>
+          <div className="speaker-card" key={speaker.id} style={{ width: `calc(83vw/${speakersInDisplay}.2)`, margin: '0.6vw'}}>
             <Link to={"/speakers/" + speaker.link}>
               <img
                 src={ImageLoader(speaker.img)}
