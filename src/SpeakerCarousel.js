@@ -6,7 +6,25 @@ import { useState, useRef, useEffect } from "react";
 const SpeakerCarousel = () => {
   let [screenWidth, setScreenWidth] = useState(window.screen.width);
 
-  let speakersInDisplay = Math.floor(6 * (Math.log(screenWidth)/Math.log(10)) - 10.6 - 0.0002 * screenWidth);
+  let inRange = (x, a, b) => { return ((x >= a) && (x <= b)); }
+
+  let speakersInDisplay = 0;
+  const calculateSpeakersInDisplay = () => {
+    let screenWidth = window.screen.width;
+    switch (true) {
+      case inRange(screenWidth, 1386, 10000):
+        return 8;
+      case inRange(screenWidth, 916, 1386):
+        return 7;
+      case inRange(screenWidth, 600, 916):
+        return 6;
+      case inRange(screenWidth, 448, 600):
+        return 5;
+      default:
+        return 4;
+    }
+  }
+  speakersInDisplay = calculateSpeakersInDisplay();
 
   const speakers = data.speakers;
   let [start, setStart] = useState(0);
@@ -15,7 +33,7 @@ const SpeakerCarousel = () => {
 
   const handleResize = () => {
     setScreenWidth(window.screen.width);
-    speakersInDisplay = Math.floor(6 * (Math.log(screenWidth)/Math.log(10)) - 10.6 - 0.0002 * screenWidth);
+    speakersInDisplay = calculateSpeakersInDisplay();
     setStart(0);
     setEnd(speakersInDisplay);
   }
