@@ -419,5 +419,5 @@ p.main-banner-text {
 }
 
 #home-side-image {
-  clip: rect(0px, 100px, 0px, 100px);
+  object-fit: cover;
 }

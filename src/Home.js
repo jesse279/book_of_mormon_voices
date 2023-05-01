@@ -42,8 +42,10 @@ const Home = () => {
       <hr style={{ marginTop: '2vw' }}></hr>
       <h2 style={{ textAlign: 'center', paddingTop: '2vw', paddingBottom: '2.5vw' }}><em>Experience the Book of Mormon</em></h2>
       <h1 style={{ textAlign: 'center', fontSize: '3vw', fontWeight: '100' }}><em>like you never have before.</em></h1>
-      <div style={{margin: defaultIndent, display: 'flex', flexDirection: 'row'}}>
-        <img id='home-side-image' src={homeImage2} style={{ width: `calc(calc(50vw - ${parseFloat(defaultIndent)}vw))`, height: '100%'}}></img>
+      <div style={{margin: defaultIndent, display: 'flex', flexDirection: 'row', justifyItems: 'space-around'}}>
+        <div id='home-size-image-container'>
+          <img id='home-side-image' src={homeImage2} style={{ width: `calc(calc(51vw - ${parseFloat(defaultIndent)}vw))`, height: '100%', marginRight: '2.5vw'}}></img>
+        </div>
         <div>
           <p style={{ width: `calc(calc(50vw - ${parseFloat(defaultIndent)}vw))`, padding: '1vw', boxSizing: 'border-box' }}>Did you know there are 106 individuals that spoke in the Book of Mormon, with 24 primary voices? Each one unique, each one a real living, breathing human being.</p>
           <p style={{ width: `calc(calc(50vw - ${parseFloat(defaultIndent)}vw))`, padding: '1vw', boxSizing: 'border-box' }}>Analyzing the data of their word and language patterns brings these speakers to life in an unprecedented way.</p>
