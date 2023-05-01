@@ -196,7 +196,7 @@ This is 8.333 inches.
 }
 
 .carousel-container {
-  width: 88vw;
+  width: 88.5vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -204,7 +204,15 @@ This is 8.333 inches.
 }
 
 .carousel-btn-container {
+  display: flex;
   width: 10vw;
+}
+
+.carousel-btn {
+  margin-top: 0.7vw;
+  box-sizing: border-box;
+  height: 10vw;
+  width: 45%;
 }
 
 .down-carrot {
@@ -215,12 +223,6 @@ This is 8.333 inches.
   max-width: 95vw;
   margin: auto;
   padding: 20px;
-}
-
-.carousel-btn {
-  margin-top: 0.7vw;
-  box-sizing: border-box;
-  height: 10vw;
 }
 
 .banner {

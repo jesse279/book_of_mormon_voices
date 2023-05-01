@@ -52,11 +52,15 @@ const SpeakerCarousel = () => {
     setSpeakerCarouselPage(speakerCarouselPage + 1);
   };
 
+  let onLastSpeaker = (end === (Math.ceil(data.speakers.length / speakersInDisplay) * speakersInDisplay));
+
+  console.log(onLastSpeaker);
+
   return (
     <div className="speaker-list-short">
       <div className="carousel-container">
         {speakers.slice(start, end).map((speaker) => (
-          <div className="speaker-card" key={speaker.id} style={{ width: `calc(100%/${speakersInDisplay})`, margin: '0.6vw'}}>
+          <div className="speaker-card" key={speaker.id} style={{ width: `calc(calc(100% - calc(1.2% * ${speakersInDisplay}))/${speakersInDisplay})`, margin: '0.6%'}}>
             <Link to={"/speakers/" + speaker.link}>
               <img
                 src={ImageLoader(speaker.img)}
@@ -68,16 +72,12 @@ const SpeakerCarousel = () => {
           </div>
         ))}
       </div>
-      <div className='carousel-btn-container' style={{ display: 'flex', justifyContent: `${start === 0 ? 'flex-end' : ''}` }}>
+      <div className='carousel-btn-container' style={{ display: 'flex', justifyContent: `${onLastSpeaker ? 'flex-start' : 'flex-end'}` }}>
         {start > 0 && (
-          <button className="carousel-btn" onClick={handlePrev}>
-            Prev
-          </button>
+          <button className="carousel-btn" onClick={handlePrev} style={{ marginLeft: `${onLastSpeaker ? '10%' : ''}` }}>&lt;</button>
         )}
         {end < speakers.length && (
-          <button className="carousel-btn" onClick={handleNext}>
-            Next
-          </button>
+          <button className="carousel-btn" onClick={handleNext}>&gt;</button>
         )}
       </div>
     </div>
