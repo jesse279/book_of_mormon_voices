@@ -52,7 +52,7 @@ const Home = () => {
           <p style={{ width: `calc(calc(50vw - ${parseFloat(defaultIndent)}vw))`, padding: '1vw', boxSizing: 'border-box' }}>Now, you get a chance to be part of this “getting to know you” exploration of people in the Book of Mormon. Come, listen and discover their captivating, untold stories.</p>
           <button style={{ width: 'auto', padding: '1vw', boxSizing: 'border-box', marginLeft: '1vw', marginTop: '1vw', backgroundColor: 'gold', borderRadius: '2vw', borderWidth: '0px' }}>
             <Link to="/Speakers">
-              <p style={{ fontSize: '1.1vw' }}>LISTEN AND DISCOVER {bannerBulletSymbol}</p>
+              <p style={{ fontSize: 'max(1.1vw, 10px)' }}>LISTEN AND DISCOVER {bannerBulletSymbol}</p>
             </Link>
             </button>
         </div>

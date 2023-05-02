@@ -54,8 +54,6 @@ const SpeakerCarousel = () => {
 
   let onLastSpeaker = (end === (Math.ceil(data.speakers.length / speakersInDisplay) * speakersInDisplay));
 
-  console.log(onLastSpeaker);
-
   return (
     <div className="speaker-list-short">
       <div className="carousel-container">
@@ -74,10 +72,10 @@ const SpeakerCarousel = () => {
       </div>
       <div className='carousel-btn-container' style={{ display: 'flex', justifyContent: `${onLastSpeaker ? 'flex-start' : 'flex-end'}` }}>
         {start > 0 && (
-          <button className="carousel-btn" onClick={handlePrev} style={{ marginLeft: `${onLastSpeaker ? '10%' : ''}` }}>&lt;</button>
+          <button className="carousel-btn" onClick={handlePrev} style={{ marginLeft: `${onLastSpeaker ? '10%' : ''}`, height: '11.25vw' }}>&lt;</button>
         )}
         {end < speakers.length && (
-          <button className="carousel-btn" onClick={handleNext}>&gt;</button>
+          <button className="carousel-btn" onClick={handleNext} style={{ height: '11.25vw' }}>&gt;</button>
         )}
       </div>
     </div>
