@@ -37,11 +37,16 @@
 
 /* base styles */
 * {
+  position: relative;
   margin: 0px;
   padding: 0px;
   font-family: 'GT Alpina';
   font-size: max(min(36px, 3vw), 16px);
   color: #333;
+}
+
+.App {
+  position: relative;
 }
 
 h1 {
@@ -111,6 +116,7 @@ This is 8.333 inches.
 }
 
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content:space-around;
@@ -120,13 +126,19 @@ This is 8.333 inches.
 }
 
 .nav-links {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .nav-header {
+  position: relative;
   padding: 1vw;
+}
+
+#testid {
+  background-color: red;
 }
 
 .nav-hamburger-menu {
@@ -171,11 +183,13 @@ This is 8.333 inches.
 }
 
 .navbar a {
+  position: relative;
   text-decoration: none;
   font-size: 0.7rem;
 }
 
 .navbar a:hover {
+  position: relative;
   color: #83B9F7;
 }
 
@@ -398,14 +412,22 @@ p.main-banner-text {
 }
 
 .navbar-expanded-menu {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 0px;
+  padding: 0.5vw;
+  z-index: 1;
+  top: 60px;
+  left: 0px;
+  background-color: white;
+  border: 1px solid black;
+  width: 11vw;
 }
 
 .nav-expansion {
-  padding: 0.1vw;
-  margin: 0px;
+  position: relative;
+  padding: '0.3vw';
+  margin: '0px';
 }
 
 .collapsible .content {

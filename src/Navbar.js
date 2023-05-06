@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
 import logo from './images/SC-Book-Of-Mormon-Central-Favicon-Black-32px.png';
 import icon from './images/icon.png';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import NavBarExpansion from './NavBarExpansion';
 import navHamburgerMenu from './images/hamburger-menu.svg';
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState([false, false]);
 
-  const speakersTitleRef = useRef(null);
   const speakersExpandableItems = [
     'Abinadi', 
     'Alma the Younger', 
@@ -32,16 +31,7 @@ const Navbar = () => {
    const speakersExpandableLinks = speakersExpandableItems.map(speakerExpandableItem => {
     return `speakers/${speakerExpandableItem.toLowerCase().replace(/[\W_]+/g, '-')}`;
    });
-   
-  const speakersExpandableStyle = {
-    position: 'absolute',
-    top: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().bottom : '0',
-    left: speakersTitleRef.current ? speakersTitleRef.current.getBoundingClientRect().left : '0',
-    backgroundColor: 'white',
-    border: '1px solid black'
-  };
 
-  const toolboxTitleRef = useRef(null);
   const toolboxExpandableItems = [
     'Timeline',
     'Word Cloud',
@@ -55,13 +45,6 @@ const Navbar = () => {
     '/toolbox/connections',
     '/toolbox/network-diagram'
   ]
-  const toolboxExpandableStyle = {
-    position: 'absolute',
-    top: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().bottom : '0',
-    left: toolboxTitleRef.current ? toolboxTitleRef.current.getBoundingClientRect().left : '0',
-    backgroundColor: 'white',
-    border: '1px solid black'
-  }
   
   const toggleIsHovering = (index) => {
     const newHovering = [...isHovering];
@@ -86,20 +69,20 @@ const Navbar = () => {
       <div className="nav-links">
         <Link to="/" className='nav-header'>Home</Link>
         <Link to="/about" className='nav-header'>About</Link>
-        <Link to="/speakers" className='nav-header' ref={speakersTitleRef} onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
+        <Link to="/speakers" className='nav-header' onMouseEnter={() => toggleIsHovering(0)} onMouseLeave={() => toggleIsHovering(0)}>
           Speakers
           <span className="down-carrot"> &#9660;</span>
           {isHovering[0] && (
-            <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={speakersExpandableStyle}></NavBarExpansion>
-          )}
+          <NavBarExpansion className='navbar-expanded-menu' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={{width: '14vw'}}></NavBarExpansion>
+        )}
         </Link>
         <Link to="/faq" className='nav-header'>FAQ</Link>
-        <Link to="/toolbox" className='nav-header' ref={toolboxTitleRef} onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
+        <Link to="/toolbox" className='nav-header' onMouseEnter={() => toggleIsHovering(1)} onMouseLeave={() => toggleIsHovering(1)}>
           Toolbox
           <span className="down-carrot"> &#9660;</span>
           {isHovering[1] && (
-              <NavBarExpansion className = 'navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={toolboxExpandableStyle}></NavBarExpansion>        
-          )}
+          <NavBarExpansion className='navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks}></NavBarExpansion>        
+        )}
         </Link>
       </div>
       <svg className='nav-hamburger-menu'>

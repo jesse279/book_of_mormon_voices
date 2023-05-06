@@ -35,7 +35,7 @@ const handleNavHoverMenuExpansion = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar></Navbar>
+        <Navbar className='nav-bar'></Navbar>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
