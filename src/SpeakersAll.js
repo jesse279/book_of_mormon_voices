@@ -10,19 +10,11 @@ const SpeakersAll = ( ) => {
     <div className="speaker-list-all">
       
     {speakers.map((speaker) => (
-      <div className="speaker-preview-2" key={speaker.id}>
-        <Link to={ '/speakers/' + speaker.link }>
-          
-          <img className="speakerall-img"   src={ImageLoader(speaker.img)} alt="" />
-          <div className="speaker-name-wordcount">
-            <h4>{ speaker.name }</h4>
-            <h4>Word Count: { speaker.word_count} </h4>
-          </div>
+        <Link key={speaker.id} className="speaker-list-all-card" to={ '/speakers/' + speaker.link }>
+          <img className="speakerall-img" src={ImageLoader(speaker.img)} alt="" />
+          <h5>{ speaker.name }</h5>
+          <h5>Word Count: { speaker.word_count} </h5>
         </Link>
-
-
-
-      </div>
     ))}
   </div>
       

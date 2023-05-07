@@ -53,6 +53,26 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  /*font-size: 1.57230275551rem;*/
+}
+
+h3 {
+  font-size: 1.2360679775rem;
+}
+
+h4 {
+  font-size: 0.97173654351rem;
+}
+
+h5 {
+  font-size: 0.7639320225rem;
+}
+
+h6 {
+  font-size: 0.600566212rem;
+}
+
 p {
   font-size: 0.75rem;
 }
@@ -198,6 +218,11 @@ This is 8.333 inches.
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 0.5vw;
+}
+
+.speakers-container {
+  margin-left: 3.44418599285vw;
+  margin-right: 3.44418599285vw;
 }
 
 .blog-preview {
@@ -355,8 +380,43 @@ p.main-banner-text {
 
 .speaker-list-all {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  margin-left: 3.44418599285vw;
+  margin-right: 3.44418599285vw;
+}
 
+.speaker-list-all-card {
+  border:#333;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 1.75vw;
+  padding-right: 1.75vw;
+}
+
+@media (max-width: 650px) {
+  .speaker-list-all-card {
+    width: 26.4vw;
+
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1100px) {
+  .speaker-list-all-card {
+    width: 19.1vw;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .speaker-list-all-card {
+    width: 14.8vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .speaker-list-all-card {
+    width: 11.8vw;
+  }
 }
 
 .speaker-list-all h4 {
@@ -372,25 +432,12 @@ p.main-banner-text {
   font-size: 0.75rem;
 }
 
-.speaker-preview-2 {
-  border:#333;
-  padding: 25px;
-
-}
-
-.speaker-name-wordcount {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:first baseline;
-  font-size: 12px;
-}
-
 .speaker-name-wordcount h4:last-of-type {
   margin-left: auto;
 }
 
 .speakerall-img {
-  height: 200px;
+  width: 100%;
 }
 
 .content-toolbox {
