@@ -7,7 +7,7 @@ const SpeakersAll = ( ) => {
   const speakers = data.speakers
 
   return ( 
-    <div className="speaker-list-all">
+    <div className="speaker-list-all first-element-spacing">
       
     {speakers.map((speaker) => (
         <Link key={speaker.id} className="speaker-list-all-card" to={ '/speakers/' + speaker.link }>

@@ -6,30 +6,30 @@ import word_cloud_thumbnail from './images/thumbnails/Word_Cloud_thumbnail.png'
 
 const Toolbox = () => {
   return ( 
-    <div>
-      <h2 style={{paddingLeft: '2.8vw', paddingTop: '1vw'}}>Toolbox</h2>
+    <div className='first-element-spacing main-text'>
+      <h2 style={{paddingBottom: '1vw'}}>Toolbox</h2>
       <div className="content-toolbox">
         <Link to={ '/toolbox/timeline' }>
           <div className="toolbox-item">
-            <h4>Timeline</h4>
+            <h5>Timeline</h5>
             <img src={ timeline_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/word-cloud' }>
           <div className="toolbox-item">
-            <h4>Word Cloud</h4>
+            <h5>Word Cloud</h5>
             <img src={ word_cloud_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/connections' }>
           <div className="toolbox-item">
-            <h4>Connections</h4>
+            <h5>Connections</h5>
             <img src={ connections_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/network-diagram' }>
           <div className="toolbox-item">
-            <h4>Network Diagram</h4>
+            <h5>Network Diagram</h5>
             <img src={ network_diagram_thumbnail } alt="" />
           </div>
         </Link>

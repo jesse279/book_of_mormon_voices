@@ -258,29 +258,23 @@ This is 8.333 inches.
   font-size: small;
 }
 
-.content {
-  max-width: 95vw;
-  margin: auto;
-  padding: 20px;
-}
-
 .banner {
   background-image: url('./images/Nephi_banner.jpg');
   background-size: cover;
   height: min(45vw, 92vh);
 }
 
-.main-banner-header {
-  padding-left: 1.5vw;
-}
-
 .main-banner-text {
-  padding-top: 1.5vw;
-  padding-left: 7.4vw;
+  margin-top: 1.31556174964vw;
 }
 
-.main-banner-links {
-  padding-top: 3.44vw;
+.first-element-spacing {
+  margin-top: 1.31556174964vw;
+}
+
+.main-text {
+  margin-left: 5.57280900008vw;
+  margin-right: 5.57280900008vw;
 }
 
 .main-banner-link {
@@ -447,11 +441,11 @@ p.main-banner-text {
 
 .content-toolbox {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .toolbox-item {
-  padding: 40px;
   height: 250px;
   width: 300px;
 }
