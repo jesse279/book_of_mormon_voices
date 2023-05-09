@@ -4,7 +4,6 @@ make hamburger menu work
 
 --(STYLE)--
 Fix home first indent (BEFORE DEPLOY)
-Format Fun Fact on speaker page indent (BEFORE DEPLOY)
 
 Update speaker name conventions to Pascal Case versions Alex sent.
 proofread / fix text
