@@ -50,27 +50,27 @@
 }
 
 h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  /*font-size: 1.57230275551rem;*/
-}
-
-h3 {
   font-size: 1.2360679775rem;
 }
 
-h4 {
+h2 {
   font-size: 0.97173654351rem;
 }
 
-h5 {
+h3 {
   font-size: 0.7639320225rem;
 }
 
-h6 {
+h4 {
   font-size: 0.600566212rem;
+}
+
+h5 {
+  font-size: 0.472135955rem;
+}
+
+h6 {
+  font-size: 0.37117033151rem;
 }
 
 p {

@@ -12,8 +12,8 @@ const SpeakersAll = ( ) => {
     {speakers.map((speaker) => (
         <Link key={speaker.id} className="speaker-list-all-card" to={ '/speakers/' + speaker.link }>
           <img className="speakerall-img" src={ImageLoader(speaker.img)} alt="" />
-          <h5>{ speaker.name }</h5>
-          <h5>Word Count: { speaker.word_count} </h5>
+          <h4>{ speaker.name }</h4>
+          <h4>Word Count: { speaker.word_count} </h4>
         </Link>
     ))}
   </div>

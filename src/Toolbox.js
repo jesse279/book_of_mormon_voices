@@ -11,25 +11,25 @@ const Toolbox = () => {
       <div className="content-toolbox">
         <Link to={ '/toolbox/timeline' }>
           <div className="toolbox-item">
-            <h5>Timeline</h5>
+            <h4>Timeline</h4>
             <img src={ timeline_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/word-cloud' }>
           <div className="toolbox-item">
-            <h5>Word Cloud</h5>
+            <h4>Word Cloud</h4>
             <img src={ word_cloud_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/connections' }>
           <div className="toolbox-item">
-            <h5>Connections</h5>
+            <h4>Connections</h4>
             <img src={ connections_thumbnail } alt="" />
           </div>
         </Link>
         <Link to={ '/toolbox/network-diagram' }>
           <div className="toolbox-item">
-            <h5>Network Diagram</h5>
+            <h4>Network Diagram</h4>
             <img src={ network_diagram_thumbnail } alt="" />
           </div>
         </Link>

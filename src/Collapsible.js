@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useCollapse } from 'react-collapsed';
-import { useParams} from "react-router-dom";
 
 const Collapsible = ({header_text, body_text}) => {
   const [ isExpanded, setExpanded ] = useState(false);
@@ -13,13 +12,13 @@ const Collapsible = ({header_text, body_text}) => {
 
   return (
         <div className="collapsible">
-            <div className="header" {...getToggleProps({onClick: handleOnClick})}>
+            <p className="header" {...getToggleProps({onClick: handleOnClick})}>
                 { header_text }
-            </div>
+            </p>
             <div {...getCollapseProps()}>
-                <div className="content">
+                <p className="content">
                     { body_text }
-                </div>
+                </p>
             </div>
         </div>
   );

@@ -62,7 +62,7 @@ const Navbar = () => {
           <img className='icon' src={icon} alt="Book of Mormon Voices Icon"/>
         </Link>
         <Link to="/">
-            <h2 className="page-title">BOOK OF MORMON EXPLORER</h2>
+            <h1>BOOK OF MORMON EXPLORER</h1>
         </Link>
       </div>
 
