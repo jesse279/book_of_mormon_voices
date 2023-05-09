@@ -15,18 +15,14 @@ const SpeakerDetails = () => {
   return ( speakerObject ? 
     <article className='speaker-details'>
       <img className="speaker-detail-img" src={ImageLoader(speakerObject.img)}></img>
-        <h3 style={{marginBottom: '1.03423086758vw'}}>
-          { speakerObject.name }
-        </h3>
-        <p className="speaker-description" style={{marginBottom: '1.03423086758vw'}}>
-          { speakerObject.description }
-        </p>
-      <div className="speaker-fact">
-        { speakerObject.fact_1 && speakerObject.analysis_1 &&  <Collapsible header_text={speakerObject.fact_1} body_text={<Analysis_Loader id={speakerObject.analysis_1}/>}/>}
-      </div>
-      <div className="speaker-fact">
-        { speakerObject.fact_2 && speakerObject.analysis_2 && <Collapsible header_text={speakerObject.fact_2} body_text={<Analysis_Loader id={speakerObject.analysis_2}/>}/>}
-      </div>
+      <h3 style={{marginBottom: '1.03423086758vw'}}>
+        { speakerObject.name }
+      </h3>
+      <p className="speaker-description" style={{marginBottom: '1.03423086758vw'}}>
+        { speakerObject.description }
+      </p>
+      { speakerObject.fact_1 && speakerObject.analysis_1 &&  <Collapsible className='collapsible' header_text={speakerObject.fact_1} body_text={<Analysis_Loader id={speakerObject.analysis_1}/>}/>}
+      { speakerObject.fact_2 && speakerObject.analysis_2 && <Collapsible className='collapsible' header_text={speakerObject.fact_2} body_text={<Analysis_Loader id={speakerObject.analysis_2}/>}/>}
     </article>
   : <NotFound></NotFound>
    );

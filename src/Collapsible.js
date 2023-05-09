@@ -11,16 +11,16 @@ const Collapsible = ({header_text, body_text}) => {
   }
 
   return (
-        <div className="collapsible">
-            <p className="header" {...getToggleProps({onClick: handleOnClick})}>
+        <>
+            <p className="collapsible-header" {...getToggleProps({onClick: handleOnClick})}>
                 { header_text }
             </p>
             <div {...getCollapseProps()}>
-                <p className="content">
+                <p className="collapsible-content">
                     { body_text }
                 </p>
             </div>
-        </div>
+        </>
   );
 }
 
