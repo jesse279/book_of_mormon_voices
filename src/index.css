@@ -265,7 +265,32 @@ This is 8.333 inches.
 }
 
 .main-banner-text {
+  position: absolute;
   margin-top: 1.31556174964vw;
+}
+
+@media (min-width: 1420px) {
+  #main-banner-links {
+    padding-top: 20vw;
+  }
+}
+
+@media (min-width: 1285px) and (max-width: 1420px) {
+  #main-banner-links {
+    padding-top: calc(20vw + 1rem);
+  }
+}
+
+@media (min-width: 527px) and (max-width: 1285px) {
+  #main-banner-links {
+    padding-top: calc(20vw + 2rem);
+  }
+}
+
+@media (min-width: 0px) and (max-width: 527px) {
+  #main-banner-links {
+    display: none;
+  }
 }
 
 .first-element-spacing {
@@ -320,13 +345,13 @@ p.main-banner-text {
     padding-right: 43vw;
   }
 }
-@media (min-width: 526px) and (max-width: 1228px) {
+@media (min-width: 479px) and (max-width: 1228px) {
   p.main-banner-text {
     padding-right: 49vw;
   }
 }
 
-@media (min-width: 526px) {
+@media (min-width: 479px) {
   p.main-banner-text {
     display:block;
   }
@@ -335,13 +360,14 @@ p.main-banner-text {
   }
 }
 
-@media (max-width: 526px) {
+@media (max-width: 479px) {
   p.main-banner-text {
     display: none;
   }
   p.backup-banner-text {
     display: block;
     margin-right: 50vw;
+    margin-top: 17vw;
   }
 }
 
@@ -360,6 +386,12 @@ p.main-banner-text {
 @media (max-width: 380px) {
   p.backup-banner-text {
     display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  #now-hear-our-voice {
+    padding-top: calc(3vw + 1rem);
   }
 }
 
