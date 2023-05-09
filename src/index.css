@@ -507,6 +507,11 @@ p.main-banner-text {
   margin: '0px';
 }
 
+.collapsible {
+  margin-left: 5.57280900008vw;
+  margin-right: 5.57280900008vw;
+}
+
 .collapsible .content {
   padding: 6px;
   background-color: #eeeeee;

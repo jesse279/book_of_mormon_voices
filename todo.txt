@@ -1,0 +1,4 @@
+put speakers nav menu dropdown in two columns to prevent appearance of sidebar which shifts site slightly
+Format FAQ
+Fix h2
+Get rid of unnecessary components, image loaders, etc.
