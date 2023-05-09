@@ -20,7 +20,7 @@ const Home = () => {
   return ( 
     <>
       <div className="banner" style={{ marginBottom: '0.2vw' }}>
-        <h1 className='first-element-spacing main-text main-banner-text' style={{ marginRight: '30vw', lineHeight: '0.55' }}><em>You've read our words. Pondered our stories.</em></h1>
+        <h1 className='main-text main-banner-text' style={{ marginRight: '30vw', lineHeight: '0.55', marginTop: '0.7vw'}}><em>You've read our words. Pondered our stories.</em></h1>
         <h1 id='now-hear-our-voice' className='main-banner-text main-text' style={{ marginRight: '35vw', lineHeight: '0.55', marginTop: '4.3810714734vw' }}><em>Now, hear our voice</em></h1>
         <p className='main-banner-text main-text' style={{marginTop: '9.01699437495vw'}}>
           Through careful research, advanced data analyzation, and 
