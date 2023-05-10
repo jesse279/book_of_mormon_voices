@@ -47,9 +47,10 @@ const Navbar = () => {
   ]
   
   const toggleIsHovering = (index) => {
-    const newHovering = [...isHovering];
-    newHovering[index] = !newHovering[index];
-    setIsHovering(newHovering);
+    const adjHovering = [...isHovering];
+    adjHovering[index] = !adjHovering[index];
+    let filteredHovering = adjHovering.map((bool, i) => i === index ? bool : false);
+    setIsHovering(filteredHovering);
   }
 
   return (  
