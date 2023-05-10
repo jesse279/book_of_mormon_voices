@@ -3,11 +3,10 @@ make hamburger menu work
     put speakers nav menu dropdown in two columns to prevent appearance of sidebar which shifts site slightly
 
 --(STYLE)--
-Fix home first indent (BEFORE DEPLOY)
-
-Update speaker name conventions to Pascal Case versions Alex sent.
-proofread / fix text
-Fix scrollbar appear movement on speaker pages
+(after deploy)
+    Update speaker name conventions to Pascal Case versions Alex sent.
+    proofread / fix text
+    Fix scrollbar appear movement on speaker pages
 
 
 --(CODE / EXTENSIBILITY)--

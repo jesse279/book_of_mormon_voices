@@ -10,8 +10,8 @@ const About = () => {
         dispute what you are about to discover.
       </p>
       <p className='main-text' >
-        A through analysis of speech patterns and words used help prove 
-        that each voice you hear in the Book of Mormon is unique. Each 
+        A thorough analysis of speech patterns and words used help prove 
+        that each voice you hear in the Book of Mormon is unique, each 
         with his or her own unique experiences, way of thinking, and way 
         of speaking.
       </p>
