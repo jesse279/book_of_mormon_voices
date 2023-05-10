@@ -73,7 +73,7 @@ const Navbar = () => {
           Speakers
           <span className="down-carrot"> &#9660;</span>
           {isHovering[0] && (
-          <NavBarExpansion className='navbar-expanded-menu' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={{width: '14vw'}}></NavBarExpansion>
+          <NavBarExpansion id='navbar-speakers-expansion' className='navbar-expanded-menu' expandableItems={speakersExpandableItems} expandableLinks={speakersExpandableLinks} style={{width: '28vw', height: '380px', top: '60px', left: '-6.8vw'}}></NavBarExpansion>
         )}
         </Link>
         <Link to="/faq" className='nav-header'>FAQ</Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
           Toolbox
           <span className="down-carrot"> &#9660;</span>
           {isHovering[1] && (
-          <NavBarExpansion className='navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks}></NavBarExpansion>        
+          <NavBarExpansion id='navbar-toolbox-expansion' className='navbar-expanded-menu' expandableItems={toolboxExpandableItems} expandableLinks={toolboxExpandableLinks} style={{width: '14vw', top: '60px', left: '-7vw'}}></NavBarExpansion>        
         )}
         </Link>
       </div>

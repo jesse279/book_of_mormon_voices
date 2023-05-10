@@ -491,11 +491,11 @@ p.main-banner-text {
 .navbar-expanded-menu {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
+  column-count: 2;
   flex-direction: column;
   padding: 0.5vw;
   z-index: 1;
-  top: 60px;
-  left: 0px;
   background-color: white;
   border: 1px solid black;
   width: 11vw;
@@ -503,8 +503,9 @@ p.main-banner-text {
 
 .nav-expansion {
   position: relative;
-  padding: '0.3vw';
-  margin: '0px';
+  width: 14vw;
+  padding: 0.35vw;
+  margin: 0px;
 }
 
 .collapsible-content {

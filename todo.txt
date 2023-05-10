@@ -1,6 +1,7 @@
 --(FUNCTIONALITY)--
 make hamburger menu work
     put speakers nav menu dropdown in two columns to prevent appearance of sidebar which shifts site slightly
+Fix only one hover at a time bug
 
 --(STYLE)--
 (after deploy)

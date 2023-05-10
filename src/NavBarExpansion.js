@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const NavBarExpansion = ({reference, expandableItems, expandableLinks, style}) => {
 
     const linkList = expandableItems.map((item, index) => (
-        <Link key={index} to={`../${expandableLinks[index]}`} className='nav-expansion' style={{ padding: '0.35vw' }}>{item}</Link>
+        <Link key={index} to={`../${expandableLinks[index]}`} className='nav-expansion'>{item}</Link>
     ));
 
     let styleWithAbsolutePosition = {...style};
