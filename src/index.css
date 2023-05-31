@@ -162,7 +162,6 @@ This is 8.333 inches.
 }
 
 .nav-hamburger-menu {
-  visibility: hidden;
   position: absolute;
   height: 1rem;
   width: 1.8rem;
@@ -176,11 +175,11 @@ This is 8.333 inches.
 
 @media (min-width: 1458px) {
   .nav-links {
-    visibility: visible;
+    display: relative;
     position: relative;
   }
   .nav-hamburger-menu {
-    visibility: hidden;
+    display: none;
     position: absolute;
   }
 }

@@ -6,11 +6,14 @@ make hamburger menu work
     Update speaker name conventions to Pascal Case versions Alex sent.
     proofread / fix text
     Fix scrollbar appear movement on speaker pages
+Fix how on responsive testing resize speaker carousel formats but not on resizing computer window
 Fix scrollbar appearing on bottom of main page side-to-side
 fix FAQ formatting (no indent)
 Toolbox margin under titles 
 Toolbox responsive to go into two columns when the page gets smaller width
 fix width of main banner links (they are clickable past the words)
+Fix banner text squishing together when small width
+"like you never have before" has huge headspace (home)
 
 
 --(CODE / EXTENSIBILITY)--

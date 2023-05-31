@@ -51,25 +51,35 @@ const Navbar = () => {
     '/toolbox/connections',
     '/toolbox/network-diagram'
   ]
+
+  const hamburgerExpandableItems = [
+    'about',
+    'speakers'
+  ]
+
+  const hamburgerExpandableLinks = [
+    '/about',
+    '/speakers'
+  ]
   
   const toggleIsHovering = (event) => {
-    console.log(event.currentTarget.id);
+    //console.log(event.currentTarget.id);
     const adjHoverStates = {...hoverStates};
-    console.log('ADJ HOVERING (SHOULD BE SAME AS ORIGINAL IS HOVERING)')
-    console.log(adjHoverStates);
-    console.log('---------------------------------');
-    console.log('ELEMENT TO CHANGE: (SHOULD BE EQUAL TO THE ID OF THE HEADER)');
-    console.log(event.currentTarget.id);
-    console.log('-----------------------------------');
+    //console.log('ADJ HOVERING (SHOULD BE SAME AS ORIGINAL IS HOVERING)')
+    //console.log(adjHoverStates);
+    //console.log('---------------------------------');
+    //console.log('ELEMENT TO CHANGE: (SHOULD BE EQUAL TO THE ID OF THE HEADER)');
+    //console.log(event.currentTarget.id);
+    //console.log('-----------------------------------');
     adjHoverStates[event.currentTarget.id] = !adjHoverStates[event.currentTarget.id];
-    console.log('ADJUSTED HOVERING (SHOULD REFLECT CHANGE IN EXPANDABLE THAT NEEDS TO OCCUR WITH A TRUE VALUE');
-    console.log(adjHoverStates);
-    console.log('-------------------------------------');
+    //console.log('ADJUSTED HOVERING (SHOULD REFLECT CHANGE IN EXPANDABLE THAT NEEDS TO OCCUR WITH A TRUE VALUE');
+    //console.log(adjHoverStates);
+    //console.log('-------------------------------------');
     let filteredHovering = {};
     Object.entries(adjHoverStates).forEach(([key, value]) => key === event.currentTarget.id ? filteredHovering[key] = value : filteredHovering[key] = false);
-    console.log('FILTERED HOVERING (SHOULD CONTAIN THE OPPOSITE VALUE AS PREV IN THE CURRENT TARGET ID AND ALL FALSE OTHERWISE');
-    console.log(filteredHovering);
-    console.log('-------------------------------------')
+    //console.log('FILTERED HOVERING (SHOULD CONTAIN THE OPPOSITE VALUE AS PREV IN THE CURRENT TARGET ID AND ALL FALSE OTHERWISE');
+    //console.log(filteredHovering);
+    //console.log('-------------------------------------')
     setHoverStates(filteredHovering);
   }
 
@@ -106,8 +116,11 @@ const Navbar = () => {
         )}
         </Link>
       </div>
-      <svg className='nav-hamburger-menu'>
+      <svg id={reactiveHoverItems[2]} className='nav-hamburger-menu' onMouseEnter={toggleIsHovering} onMouseLeave={toggleIsHovering}>
         <image className='hamburger-svg' href={navHamburgerMenu}/>
+        {hoverStates[reactiveHoverItems[2]] && (
+          <NavBarExpansion className='navbar-expanded-menu' expandableItems={hamburgerExpandableItems} expandableLinks={hamburgerExpandableLinks} style={{width: '14vw', top: '60px', left: '-14vw'}}></NavBarExpansion>
+        )}
       </svg>
     </nav>
   );

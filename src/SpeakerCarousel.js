@@ -4,13 +4,13 @@ import ImageLoader from "./ImageLoader";
 import { useState, useRef, useEffect } from "react";
 
 const SpeakerCarousel = () => {
-  let [screenWidth, setScreenWidth] = useState(window.screen.width);
+  let [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   let inRange = (x, a, b) => { return ((x >= a) && (x <= b)); }
 
   let speakersInDisplay = 0;
   const calculateSpeakersInDisplay = () => {
-    let screenWidth = window.screen.width;
+    let screenWidth = window.innerWidth;
     switch (true) {
       case inRange(screenWidth, 1386, 10000):
         return 8;
@@ -32,7 +32,7 @@ const SpeakerCarousel = () => {
   let [speakerCarouselPage, setSpeakerCarouselPage] = useState(0);
 
   const handleResize = () => {
-    setScreenWidth(window.screen.width);
+    setWindowWidth(window.innerWidth);
     speakersInDisplay = calculateSpeakersInDisplay();
     setStart(0);
     setEnd(speakersInDisplay);
