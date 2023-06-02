@@ -19,4 +19,4 @@ Fix banner text squishing together when small width
 --(CODE / EXTENSIBILITY)--
 Come up with solution on Mormon's page - drop down is not obvious anything appeared -- maybe make it so if the fact is at the bottom of the page it does something special to show something appeared, maybe make every fact when opened scroll down a little bit if there is room to be scrolled? Or would this interfere with brand guidelines?
 Get rid of unnecessary components, image loaders, etc.
-Implement new naming conventions
+Implement new naming conventions (from doc linked in email)

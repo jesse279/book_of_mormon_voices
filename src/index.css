@@ -111,6 +111,13 @@ This is 8.333 inches.
   box-sizing: border-box;
 }
 
+@media (max-width: 1458px) {
+  .nav-title {
+    grid-column-start: 1;
+    grid-column-end: 23;
+  }
+}
+
 .icon {
   height: max(min(1in, 10vw), 64px);
   padding: 20%;
@@ -137,12 +144,23 @@ This is 8.333 inches.
 
 .navbar {
   position: relative;
-  display: flex;
   align-items: center;
   justify-content:space-around;
   max-width: auto;
   border-bottom: 1px solid #f2f2f2; 
   height: auto;
+}
+
+@media (min-width: 1459px) {
+  .navbar {
+    display: flex;
+  }
+}
+@media (max-width: 1458px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+  }
 }
 
 .nav-links {
@@ -161,24 +179,29 @@ This is 8.333 inches.
   background-color: red;
 }
 
+.nav-hamburger-container {
+  height: calc(max(min(36px, 3vw), 16px) + 2vw);
+}
+
+@media (max-width: 1458px) {
+  .nav-hamburger-container {
+    grid-column: 2 / -1;
+  }
+}
+
 .nav-hamburger-menu {
-  position: absolute;
-  height: 1rem;
-  width: 1.8rem;
-  margin-left: 28vw;
-  margin-right: max(2vw, 12px);
+  height: 100%;
+  width: 1.37rem;
+  margin-right: 1vw;
+  background-color: red;
 }
 
-.hamburger-svg {
-  height: 1rem;
-}
-
-@media (min-width: 1458px) {
+@media (min-width: 1459px) {
   .nav-links {
     display: relative;
     position: relative;
   }
-  .nav-hamburger-menu {
+  .nav-hamburger-container {
     display: none;
     position: absolute;
   }
@@ -189,9 +212,10 @@ This is 8.333 inches.
     visibility: hidden;
     position: absolute;
   }
-  .nav-hamburger-menu {
+  .nav-hamburger-container {
     visibility: visible;
     position: relative;
+    grid-column: 24/-1;
   }
 }
 
